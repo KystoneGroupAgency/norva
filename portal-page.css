@@ -1,0 +1,148 @@
+/* ============================================================
+   INTELLIGENCE PORTAL — dedicated product page
+   Builds on styles.css tokens & components
+   ============================================================ */
+
+/* ---------- back-to-site pill in nav ---------- */
+.nav .home-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--text-mute); padding: 7px 12px; border: 1px solid var(--line); border-radius: 100px;
+  transition: color 0.25s, border-color 0.25s;
+}
+.nav .home-link:hover { color: var(--text); border-color: var(--line-strong); }
+.nav .home-link svg { width: 13px; height: 13px; }
+
+.product-tag {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.32em;
+  color: var(--accent-bright); text-transform: uppercase; margin-top: 3px; padding-left: 2px;
+}
+
+/* ============================================================
+   PRODUCT HERO
+   ============================================================ */
+.phero { position: relative; overflow: hidden; padding: clamp(140px, 17vw, 210px) 0 clamp(70px, 9vw, 120px); }
+.phero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(110% 80% at 80% 0%, rgba(47,107,255,0.13), transparent 56%),
+    radial-gradient(80% 70% at 8% 100%, rgba(7,179,155,0.09), transparent 60%); }
+.phero-grid { position: absolute; inset: 0; z-index: 0;
+  background-image: linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(120% 100% at 50% 0%, #000 28%, transparent 76%);
+  mask-image: radial-gradient(120% 100% at 50% 0%, #000 28%, transparent 76%); }
+.phero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.02fr; gap: clamp(36px, 5vw, 76px); align-items: center; }
+.phero-copy { max-width: 620px; }
+.phero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(40px, 6.4vw, 82px); line-height: 0.96; letter-spacing: -0.04em; margin: 24px 0 0; text-wrap: balance; }
+.phero .lead { margin-top: 26px; font-size: clamp(16px, 1.6vw, 20px); color: var(--text-dim); max-width: 52ch; text-wrap: pretty; }
+.phero .hero-cta { margin-top: 34px; display: flex; gap: 13px; flex-wrap: wrap; }
+
+/* product window reused from styles.css (.pwin) — sizing tweaks here */
+.phero .portal-visual { position: relative; }
+.phero .pwin-body { min-height: 360px; }
+
+/* ============================================================
+   VALUE STRIP
+   ============================================================ */
+.vstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line-soft); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); margin-top: clamp(40px, 6vw, 72px); }
+.vcell { background: var(--surface); padding: 30px 28px; display: flex; flex-direction: column; gap: 8px; }
+.vcell .vnum { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 3.6vw, 44px); letter-spacing: -0.03em; line-height: 1; }
+.vcell .vlbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-mute); }
+.vcell .vsub { color: var(--text-dim); font-size: 14.5px; margin-top: 2px; text-wrap: pretty; }
+
+/* ============================================================
+   PROBLEM
+   ============================================================ */
+.prob-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.prob {
+  background: var(--surface); border: 1px solid var(--line-soft); border-radius: 16px;
+  padding: 34px 32px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+}
+.prob .pnum { font-family: var(--mono); font-size: 12px; color: var(--accent-3); letter-spacing: 0.1em; }
+.prob h3 { font-family: var(--display); font-weight: 600; font-size: 25px; letter-spacing: -0.02em; margin-top: 18px; text-wrap: balance; }
+.prob p { color: var(--text-dim); margin-top: 12px; font-size: 15.5px; text-wrap: pretty; }
+.prob .strike { position: absolute; top: 26px; right: 30px; width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; background: rgba(124,92,255,0.08); border: 1px solid rgba(124,92,255,0.22); color: var(--accent-3); }
+.prob .strike svg { width: 17px; height: 17px; }
+
+/* ============================================================
+   HOW IT WORKS  (flow)
+   ============================================================ */
+.flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: flow; }
+.flow-step { position: relative; background: var(--surface); border: 1px solid var(--line-soft); border-radius: 16px; padding: 28px 24px 30px; box-shadow: var(--shadow-sm); transition: border-color 0.4s, transform 0.4s var(--ease), box-shadow 0.4s; }
+.flow-step:hover { border-color: var(--line-strong); transform: translateY(-4px); box-shadow: 0 30px 60px -34px rgba(30,50,110,0.34); }
+.flow-step .fn { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; font-family: var(--display); font-weight: 600; font-size: 17px; color: #fff; background: var(--grad); box-shadow: 0 10px 22px -12px var(--glow); }
+.flow-step h3 { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; margin-top: 22px; }
+.flow-step p { color: var(--text-dim); font-size: 14.5px; margin-top: 10px; text-wrap: pretty; }
+.flow-step::after { content: ""; position: absolute; top: 48px; right: -8px; width: 16px; height: 1px; background: var(--line-strong); z-index: 3; }
+.flow-step:last-child::after { display: none; }
+
+/* ============================================================
+   LICENSING / COST COMPARISON
+   ============================================================ */
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
+.cpanel { border-radius: 18px; padding: 32px 30px; border: 1px solid var(--line-soft); background: var(--surface); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
+.cpanel.muted { background: var(--bg-2); }
+.cpanel.win { background: linear-gradient(180deg, rgba(47,107,255,0.08), var(--surface)); border-color: rgba(47,107,255,0.30); }
+.cpanel .cp-cap { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute); }
+.cpanel.win .cp-cap { color: var(--accent-bright); }
+.cpanel h3 { font-family: var(--display); font-weight: 600; font-size: 24px; letter-spacing: -0.02em; margin-top: 12px; }
+.cpanel .cp-model { color: var(--text-dim); font-size: 14.5px; margin-top: 10px; min-height: 44px; text-wrap: pretty; }
+
+/* illustrative cost bars */
+.cost-viz { margin-top: 22px; }
+.cost-viz .cv-h { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mute); margin-bottom: 14px; }
+.cost-bars { display: flex; align-items: flex-end; gap: 12px; height: 116px; }
+.cost-bars .cb { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 9px; height: 100%; }
+.cost-bars .cb .bar { width: 100%; border-radius: 7px 7px 3px 3px; transition: height 1.2s var(--ease); }
+.cpanel.muted .cost-bars .cb .bar { background: linear-gradient(180deg, #b29bf2, #c9bcf2); }
+.cpanel.muted .cost-bars .cb:last-child .bar { background: linear-gradient(180deg, #7c5cff, #9b82ff); }
+.cpanel.win .cost-bars .cb .bar { background: var(--grad); opacity: 0.55; }
+.cpanel.win .cost-bars .cb:last-child .bar { opacity: 1; }
+.cost-bars .cb small { font-family: var(--mono); font-size: 9.5px; color: var(--text-mute); letter-spacing: 0.04em; }
+
+.cp-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid var(--line-soft); }
+.cp-list li { display: flex; gap: 11px; font-size: 14.5px; color: var(--text-dim); align-items: flex-start; }
+.cp-list li svg { flex: none; margin-top: 3px; }
+.cp-list .ic-x { color: var(--accent-3); }
+.cp-list .ic-ok { color: var(--accent-2); }
+.compare-note { margin-top: 22px; font-family: var(--mono); font-size: 12px; color: var(--text-mute); letter-spacing: 0.02em; text-align: center; }
+
+/* ============================================================
+   BEYOND DASHBOARDS  (insight examples)
+   ============================================================ */
+.beyond { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+.insight-stack { display: flex; flex-direction: column; gap: 12px; }
+.icard { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow-sm); position: relative; }
+.icard .ic-head { display: flex; align-items: center; gap: 9px; margin-bottom: 9px; }
+.icard .ic-chip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; }
+.icard .ic-chip.up { color: var(--accent-2); background: rgba(7,179,155,0.08); border: 1px solid rgba(7,179,155,0.26); }
+.icard .ic-chip.alert { color: var(--accent-3); background: rgba(124,92,255,0.08); border: 1px solid rgba(124,92,255,0.26); }
+.icard .ic-chip.trend { color: var(--accent-bright); background: rgba(47,107,255,0.08); border: 1px solid rgba(47,107,255,0.26); }
+.icard .ic-time { font-family: var(--mono); font-size: 10px; color: var(--text-mute); margin-left: auto; }
+.icard p { font-size: 14.5px; color: var(--text); line-height: 1.5; text-wrap: pretty; }
+.icard p b { color: var(--accent-bright); font-weight: 600; }
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.pcta { position: relative; overflow: hidden; padding: clamp(90px, 12vw, 150px) 0; background: linear-gradient(180deg, var(--bg-2), var(--surface)); border-block: 1px solid var(--line-soft); }
+.pcta-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(70% 120% at 50% 120%, rgba(47,107,255,0.14), transparent 60%); }
+.pcta .wrap { position: relative; z-index: 2; text-align: center; }
+.pcta h2 { font-family: var(--display); font-weight: 600; font-size: clamp(36px, 5.4vw, 72px); line-height: 1.0; letter-spacing: -0.04em; text-wrap: balance; max-width: 16ch; margin: 0 auto; }
+.pcta p { color: var(--text-dim); font-size: clamp(16px, 1.6vw, 20px); margin: 24px auto 0; max-width: 52ch; text-wrap: pretty; }
+.pcta .hero-cta { margin-top: 38px; justify-content: center; display: flex; gap: 13px; flex-wrap: wrap; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1080px) {
+  .phero .wrap { grid-template-columns: 1fr; gap: 48px; }
+  .phero .portal-visual { max-width: 600px; }
+  .flow { grid-template-columns: repeat(2, 1fr); }
+  .flow-step::after { display: none; }
+  .beyond { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .vstrip, .prob-grid, .compare, .flow { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Norva · Data that turns into decisions</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6bff'/%3E%3Cstop offset='1' stop-color='%2307b39b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 2 L37.7 26.3 L58 32 L37.7 37.7 L32 62 L26.3 37.7 L6 32 L26.3 26.3 Z' fill='url(%23g)'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="mobile.css?v=2" />
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav">
+  <a class="brand" href="#top" aria-label="Norva">
+    <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="kg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#2f6bff" />
+          <stop offset="1" stop-color="#07b39b" />
+        </linearGradient>
+      </defs>
+      <path d="M32 2 L37.7 26.3 L58 32 L37.7 37.7 L32 62 L26.3 37.7 L6 32 L26.3 26.3 Z" fill="url(#kg)" />
+    </svg>
+    <span class="wordmark norva">nor<span>va</span></span>
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#approach" data-i18n="nav.approach">Approach</a>
+    <a href="#impact" data-i18n="nav.results">Results</a>
+    <a href="#portal" data-i18n="nav.portal">Portal</a>
+    <a href="#security" data-i18n="nav.security">Security</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+  </div>
+
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="pt">PT</button>
+    </div>
+    <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Start a project</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="ico-menu" width="20" height="20" viewBox="0 0 18 18" fill="none"><path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" stroke-width="1.6" /></svg>
+    <svg class="ico-close" width="20" height="20" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+  </button>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top">
+  <div class="hero-bg" data-parallax="0.06"></div>
+  <div class="hero-grid" data-parallax="0.14"></div>
+  <div class="spotlight"></div>
+
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow hero-fade" data-i18n="hero.eyebrow">Data Intelligence Studio</span>
+      <h1>
+        <span class="line"><span data-i18n="hero.l1">Data that</span></span>
+        <span class="line"><span data-i18n="hero.l2">turns into</span></span>
+        <span class="line"><span class="gradient-text" data-i18n="hero.l3">decisions.</span></span>
+      </h1>
+      <p class="hero-sub hero-fade" data-i18n="hero.sub">Norva embeds with your team to design dashboards, engineer pipelines, and ship machine learning models in Power BI, Python, and Tableau.</p>
+      <div class="hero-cta hero-fade">
+        <a href="#contact" class="btn btn-primary">
+          <span class="dot"></span>
+          <span data-i18n="hero.cta1">Start a project</span>
+        </a>
+        <a href="#approach" class="btn btn-ghost">
+          <span data-i18n="hero.cta2">See how we work</span>
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.5" /></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- LIVE DASHBOARD PANEL -->
+    <div class="panel" data-bars>
+      <div class="panel-head">
+        <span class="title">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span data-i18n="panel.title">Executive overview</span>
+        </span>
+        <span class="live"><span class="pulse"></span><span data-i18n="panel.live">Live</span></span>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi">
+          <div class="label" data-i18n="kpi1.l">Revenue</div>
+          <div class="val" data-tick data-base="4.2" data-dec="1" data-prefix="$" data-suffix="M">$4.2<span class="u">M</span></div>
+          <div class="delta">▲ 12.4%</div>
+        </div>
+        <div class="kpi">
+          <div class="label" data-i18n="kpi2.l">Conversion</div>
+          <div class="val" data-tick data-base="18.6" data-dec="1" data-suffix="%" data-jit="0.3">18.6%</div>
+          <div class="delta">▲ 3.1%</div>
+        </div>
+        <div class="kpi">
+          <div class="label" data-i18n="kpi3.l">Accuracy</div>
+          <div class="val" data-tick data-base="94.3" data-dec="1" data-suffix="%" data-jit="0.2">94.3%</div>
+          <div class="delta down">model v4</div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="ct">
+          <b data-i18n="chart.title">Pipeline throughput</b>
+          <span class="legend">
+            <span><i style="background:#2f6bff"></i><span data-i18n="chart.s1">Ingested</span></span>
+            <span><i style="background:#07b39b"></i><span data-i18n="chart.s2">Modeled</span></span>
+          </span>
+        </div>
+        <div class="chart-wrap"><canvas id="lineChart"></canvas></div>
+      </div>
+
+      <div class="panel-bottom">
+        <div class="bars-card">
+          <div class="bt" data-i18n="bars.title">Data sources</div>
+          <div class="bar-row"><span>SQL</span><div class="bar-track"><div class="bar-fill" data-w="86"></div></div><span>86</span></div>
+          <div class="bar-row"><span>CRM</span><div class="bar-track"><div class="bar-fill" data-w="64"></div></div><span>64</span></div>
+          <div class="bar-row"><span>API</span><div class="bar-track"><div class="bar-fill" data-w="47"></div></div><span>47</span></div>
+          <div class="bar-row" style="margin-bottom:0"><span>CSV</span><div class="bar-track"><div class="bar-fill" data-w="33"></div></div><span>33</span></div>
+        </div>
+        <div class="gauge-card">
+          <div class="bt" data-i18n="gauge.title">Data health</div>
+          <div class="gwrap">
+            <canvas id="gauge" style="width:100%;height:96px"></canvas>
+            <div class="gval"><b><span id="gaugeVal">0</span>%</b><small data-i18n="gauge.sub">quality</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span class="bar"></span><span data-i18n="hero.scroll">Scroll to explore</span></div>
+</header>
+
+<!-- ============================ MARQUEE ============================ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span data-i18n="marquee.0">Power BI</span>
+    <span data-i18n="marquee.1">Python</span>
+    <span data-i18n="marquee.2">Tableau</span>
+    <span data-i18n="marquee.3">Data Engineering</span>
+    <span data-i18n="marquee.4">Machine Learning</span>
+    <span data-i18n="marquee.5">Automation</span>
+    <span data-i18n="marquee.0">Power BI</span>
+    <span data-i18n="marquee.1">Python</span>
+    <span data-i18n="marquee.2">Tableau</span>
+    <span data-i18n="marquee.3">Data Engineering</span>
+    <span data-i18n="marquee.4">Machine Learning</span>
+    <span data-i18n="marquee.5">Automation</span>
+  </div>
+</div>
+
+<!-- ============================ FEATURED STACKS (parallax) ============================ -->
+<section class="stacks-band" id="stacks-featured" data-screen-label="Featured stacks">
+  <div class="sb-grid" data-parallax="0.09"></div>
+  <span class="sb-blob b1" data-parallax="0.24"></span>
+  <span class="sb-blob b2" data-parallax="-0.20"></span>
+  <span class="sb-blob b3" data-parallax="0.32"></span>
+
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="feat.eyebrow">Featured stacks</span>
+      <h2 data-i18n="feat.title">We build on the <span class="gradient-text">best platforms</span> in the market.</h2>
+      <p data-i18n="feat.sub">We don't lock you into a single tool. We master the leading data and AI platforms and integrate with whatever makes sense for your business.</p>
+    </div>
+
+    <div class="bl-grid">
+
+      <figure class="bl reveal" data-delay="1">
+        <div class="bl-inner" data-parallax="0.06">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" aria-label="Microsoft">
+            <rect x="1" y="1" width="10.2" height="10.2" fill="#F25022" />
+            <rect x="12.8" y="1" width="10.2" height="10.2" fill="#7FBA00" />
+            <rect x="1" y="12.8" width="10.2" height="10.2" fill="#00A4EF" />
+            <rect x="12.8" y="12.8" width="10.2" height="10.2" fill="#FFB900" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Microsoft</span><span class="bl-sub" data-i18n="feat.s.ms">Cloud &amp; Fabric</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="2">
+        <div class="bl-inner" data-parallax="-0.05">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" aria-label="Power BI">
+            <rect x="3" y="9" width="4.4" height="12" rx="1.4" fill="#C98A00" />
+            <rect x="9.8" y="5" width="4.4" height="16" rx="1.4" fill="#E6A800" />
+            <rect x="16.6" y="2" width="4.4" height="19" rx="1.4" fill="#F2C811" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Power BI</span><span class="bl-sub" data-i18n="feat.s.pbi">Dashboards</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="3">
+        <div class="bl-inner" data-parallax="0.05">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" aria-label="Microsoft Azure">
+            <path d="M11 3.4 L4 19 H8.4 L13.3 6.2 Z" fill="#114A8B" />
+            <path d="M12.4 7 L20.2 20.6 H8.1 L10.4 16.6 H14 L12 12.9 Z" fill="#0078D4" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Azure</span><span class="bl-sub" data-i18n="feat.s.az">Data infra</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="4">
+        <div class="bl-inner" data-parallax="0.05">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" aria-label="Amazon Web Services">
+            <text x="12" y="11.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="8.2" letter-spacing="-0.3" fill="#232F3E">aws</text>
+            <path d="M4.6 16.2 C 8.4 19.4, 15.6 19.4, 19.4 16.2" stroke="#FF9900" stroke-width="1.9" stroke-linecap="round" fill="none" />
+            <path d="M17.3 15.1 L19.6 15.9 L18.8 18.2" stroke="#FF9900" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">AWS</span><span class="bl-sub" data-i18n="feat.s.aws">Cloud infra</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="1">
+        <div class="bl-inner" data-parallax="-0.06">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="#FF3621" aria-label="Databricks">
+            <path d="M12 3 L21 7.2 L12 11.4 L3 7.2 Z" opacity="0.5" />
+            <path d="M3 11 L12 15.2 L21 11 V13.4 L12 17.6 L3 13.4 Z" />
+            <path d="M3 15.6 L12 19.8 L21 15.6 V18 L12 22.2 L3 18 Z" opacity="0.78" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Databricks</span><span class="bl-sub" data-i18n="feat.s.db">Lakehouse</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="1">
+        <div class="bl-inner" data-parallax="-0.05">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" stroke="#29B5E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Snowflake">
+            <path d="M12 2 V22 M3.3 7 L20.7 17 M3.3 17 L20.7 7" />
+            <path d="M12 5 L9.8 6.6 M12 5 L14.2 6.6 M12 19 L9.8 17.4 M12 19 L14.2 17.4" />
+            <path d="M6 8.6 L3.4 8.9 M6 8.6 L6.3 11.2 M18 15.4 L20.6 15.1 M18 15.4 L17.7 12.8" />
+            <path d="M18 8.6 L20.6 8.9 M18 8.6 L17.7 11.2 M6 15.4 L3.4 15.1 M6 15.4 L6.3 12.8" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Snowflake</span><span class="bl-sub" data-i18n="feat.s.sf">Data Cloud</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="2">
+        <div class="bl-inner" data-parallax="0.06">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" aria-label="Python">
+            <path d="M11.8 2.4c-1.9 0-3.4.2-4.5.6-1 .4-1.5 1-1.5 2v2.2h6v.7H4.3c-1.6 0-3 .9-3.5 2.8-.5 2.1-.5 3.4 0 5.6.4 1.7 1.3 2.9 2.9 2.9H6V16c0-1.9 1.6-3.5 3.5-3.5h5.9c1.5 0 2.7-1.2 2.7-2.8V5.1c0-1.5-1.3-2.6-2.8-2.6l-3.5-.1zM8.6 4.4c.6 0 1 .5 1 1 0 .6-.4 1-1 1-.5 0-1-.4-1-1 0-.6.5-1 1-1z" fill="#3776AB" />
+            <path d="M12.2 21.6c1.9 0 3.4-.2 4.5-.6 1-.4 1.5-1 1.5-2v-2.2h-6v-.7h7.5c1.6 0 3-.9 3.5-2.8.5-2.1.5-3.4 0-5.6-.4-1.7-1.3-2.9-2.9-2.9H18V8c0 1.9-1.6 3.5-3.5 3.5H8.6c-1.5 0-2.7 1.2-2.7 2.8v3.6c0 1.5 1.3 2.6 2.8 2.6l3.5.1zM15.4 19.6c-.6 0-1-.5-1-1 0-.6.4-1 1-1 .5 0 1 .4 1 1 0 .6-.5 1-1 1z" fill="#FFD43B" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Python</span><span class="bl-sub" data-i18n="feat.s.py">Analytics &amp; ML</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="3">
+        <div class="bl-inner" data-parallax="0.05">
+          <svg class="bl-logo" viewBox="0 0 24 24" fill="none" stroke-linecap="round" aria-label="Apache Spark">
+            <path d="M5.5 7.2 A 8.4 8.4 0 1 0 18.5 7.2" stroke="#E25A1C" stroke-width="2.2" />
+            <path d="M7.8 8.8 A 5.6 5.6 0 1 0 16.2 8.8" stroke="#ED8B00" stroke-width="2" />
+            <path d="M12 1.6 L14.3 6 L9.4 5.2 Z" fill="#E25A1C" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Apache Spark</span><span class="bl-sub" data-i18n="feat.s.spark">Big data</span></div>
+        </div>
+      </figure>
+
+      <figure class="bl reveal" data-delay="4">
+        <div class="bl-inner" data-parallax="-0.06">
+          <svg class="bl-logo" viewBox="0 0 24 24" stroke="#CC785C" stroke-width="1.7" stroke-linecap="round" aria-label="Claude">
+            <path d="M12 2.4 V21.6 M2.4 12 H21.6 M5.2 5.2 L18.8 18.8 M18.8 5.2 L5.2 18.8" />
+            <path d="M8.2 3.4 L15.8 20.6 M15.8 3.4 L8.2 20.6 M3.4 8.2 L20.6 15.8 M20.6 8.2 L3.4 15.8" stroke-width="1.3" opacity="0.7" />
+          </svg>
+          <div class="bl-meta"><span class="bl-name">Claude</span><span class="bl-sub" data-i18n="feat.s.claude">Generative AI</span></div>
+        </div>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="svc.eyebrow">What we build</span>
+      <h2 data-i18n="svc.title">Complete capability, from extraction to decision.</h2>
+      <p data-i18n="svc.sub">Take the full stack, or just the missing piece your team needs.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc reveal" data-delay="1">
+        <div class="svc-num">01</div>
+        <svg class="svc-ico" viewBox="0 0 40 40" fill="none"><rect x="4" y="22" width="7" height="14" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="16.5" y="12" width="7" height="24" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="29" y="4" width="7" height="32" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3 data-i18n="svc1.t">Power BI Dashboards</h3>
+        <p data-i18n="svc1.p">Executive dashboards people actually use, built on trustworthy models, clean DAX, and real governance.</p>
+        <div class="tags"><b>DAX</b><b>Power Query</b><b>RLS</b></div>
+      </article>
+
+      <article class="svc reveal" data-delay="2">
+        <div class="svc-num">02</div>
+        <svg class="svc-ico" viewBox="0 0 40 40" fill="none"><path d="M14 10l-9 10 9 10M26 10l9 10-9 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 data-i18n="svc2.t">Python Analytics &amp; Automation</h3>
+        <p data-i18n="svc2.p">Analysis, ETL, and automation that kills manual work and keeps data flowing on its own.</p>
+        <div class="tags"><b>Pandas</b><b>ETL</b><b>APIs</b></div>
+      </article>
+
+      <article class="svc reveal" data-delay="3">
+        <div class="svc-num">03</div>
+        <svg class="svc-ico" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="15" stroke="currentColor" stroke-width="1.6"/><path d="M20 5v30M5 20h30" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><circle cx="27" cy="14" r="3" fill="currentColor"/></svg>
+        <h3 data-i18n="svc3.t">Tableau Visualization</h3>
+        <p data-i18n="svc3.p">Visual stories that make complex patterns obvious in seconds.</p>
+        <div class="tags"><b>LOD</b><b>Storytelling</b></div>
+      </article>
+
+      <article class="svc wide reveal" data-delay="1">
+        <div>
+          <div class="svc-num">04</div>
+          <svg class="svc-ico" viewBox="0 0 40 40" fill="none"><circle cx="7" cy="20" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="9" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="31" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="33" cy="20" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M11 20h5m1.5-9.5L33 18M17.5 29.5L33 22M16.5 11l-6 6m6 12l-6-6" stroke="currentColor" stroke-width="1.3" opacity="0.6"/></svg>
+          <h3 data-i18n="svc4.t">Data Engineering</h3>
+          <p data-i18n="svc4.p">Pipelines from extraction to visualization: ingestion, modeling, and trusted layers that scale.</p>
+        </div>
+        <div class="tags"><b>SQL</b><b>dbt</b><b>Airflow</b><b>Azure</b><b>Snowflake</b></div>
+      </article>
+
+      <article class="svc reveal" data-delay="2">
+        <div class="svc-num">05</div>
+        <svg class="svc-ico" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="32" cy="8" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="32" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="32" cy="32" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M11 10l5.5 6.5M29 10l-5.5 6.5M11 30l5.5-6.5M29 30l-5.5-6.5" stroke="currentColor" stroke-width="1.2" opacity="0.6"/></svg>
+        <h3 data-i18n="svc5.t">Data Science &amp; ML</h3>
+        <p data-i18n="svc5.p">Predictive models that turn history into foresight, from prototype to production.</p>
+        <div class="tags"><b>scikit-learn</b><b>MLOps</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ APPROACH ============================ -->
+<section class="section approach" id="approach">
+  <div class="wrap">
+    <div class="approach-aside reveal">
+      <span class="eyebrow" data-i18n="appr.eyebrow">How we work</span>
+      <h2 style="font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-0.03em;margin:22px 0 18px;" data-i18n="appr.title">We get inside your business before we touch the data.</h2>
+      <p style="color:var(--text-dim);max-width:42ch;text-wrap:pretty;" data-i18n="appr.sub">Technology is the easy part. We start with the people, the culture, and the decisions that actually matter.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal" data-delay="1">
+        <div class="step-n">01</div>
+        <div><h3 data-i18n="appr.s1.t">Embed</h3><p data-i18n="appr.s1.p">We get into your routine and learn the culture, how decisions actually get made today.</p></div>
+      </div>
+      <div class="step reveal" data-delay="2">
+        <div class="step-n">02</div>
+        <div><h3 data-i18n="appr.s2.t">Listen</h3><p data-i18n="appr.s2.p">We map stakeholders and listen to the people on the ground. The best metrics come from those doing the work.</p></div>
+      </div>
+      <div class="step reveal" data-delay="3">
+        <div class="step-n">03</div>
+        <div><h3 data-i18n="appr.s3.t">Structure</h3><p data-i18n="appr.s3.p">We design structured, trustworthy data models. A single source of truth your team believes in.</p></div>
+      </div>
+      <div class="step reveal" data-delay="4">
+        <div class="step-n">04</div>
+        <div><h3 data-i18n="appr.s4.t">Build</h3><p data-i18n="appr.s4.p">We ship dashboards and models into production, and empower your team to evolve them.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ WHY KYSTONE ============================ -->
+<section class="section why" id="why" data-screen-label="Why Norva">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="why.eyebrow">Why Norva</span>
+      <h2 data-i18n="why.title">The difference shows up after the dashboard ships.</h2>
+      <p data-i18n="why.sub">Most data projects fail at adoption, not delivery. We are built to close that gap — which is exactly where the comparison should be made.</p>
+    </div>
+
+    <div class="why-cols">
+      <div class="why-col muted reveal" data-delay="1">
+        <div class="why-h">
+          <b data-i18n="why.a.h">The typical vendor</b>
+          <span class="why-tag" data-i18n="why.a.tag">Common</span>
+        </div>
+        <ul class="why-list">
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.1">Hands over the dashboard and disappears.</span></li>
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.2">Junior teams learning on your project.</span></li>
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.3">Starts from the tool, not the decision.</span></li>
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.4">Locks you into a single stack.</span></li>
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.5">Little to no documentation.</span></li>
+          <li><span class="why-ico"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2.5 2.5l6 6M8.5 2.5l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-i18n="why.a.6">Metrics that nobody actually uses.</span></li>
+        </ul>
+      </div>
+
+      <div class="why-col kystone reveal" data-delay="2">
+        <div class="why-h">
+          <b data-i18n="why.b.h">The Norva way</b>
+          <span class="why-tag" data-i18n="why.b.tag">Our standard</span>
+        </div>
+        <ul class="why-list">
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.1">We stay until adoption actually happens.</span></li>
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.2">100% senior team, from diagnosis to production.</span></li>
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.3">We understand the decision before touching data.</span></li>
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.4">Tool-agnostic — we integrate with what you have.</span></li>
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.5">Governance and documentation from day one.</span></li>
+          <li><span class="why-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6.2l2.6 2.4L10 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span data-i18n="why.b.6">Metrics that turn into decisions.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IMPACT / RESULTS ============================ -->
+<section class="section impact" id="impact" data-screen-label="Impact" data-bars>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="imp.eyebrow">Impact we generate</span>
+      <h2 data-i18n="imp.title">Less manual work. Faster, more trustworthy decisions.</h2>
+      <p data-i18n="imp.sub">Concrete outcomes from real engagements — client names withheld under confidentiality.</p>
+    </div>
+
+    <div class="impact-hero reveal">
+      <div>
+        <span class="eyebrow" data-i18n="imp.flag">Flagship result</span>
+        <p class="impact-claim"><span data-i18n="imp.claim.a">From</span> <em data-i18n="imp.claim.b">6 hours of manual work</em> <span data-i18n="imp.claim.c">to</span> <em data-i18n="imp.claim.d">5 automated minutes.</em></p>
+        <p class="impact-sub" data-i18n="imp.claim.sub">A recurring process that consumed an entire morning now runs on its own — through Python pipelines deployed in the cloud, with no human babysitting.</p>
+        <div class="impact-meta">
+          <div class="im"><b>Python</b><small data-i18n="imp.m1">Pipelines</small></div>
+          <div class="im"><b>Cloud</b><small data-i18n="imp.m2">24/7 automated</small></div>
+          <div class="im"><b>0</b><small data-i18n="imp.m3">manual rework</small></div>
+        </div>
+      </div>
+      <div class="bignum">
+        <div class="nb from">
+          <div class="v">6<span style="font-size:0.5em">h</span></div>
+          <div class="l" data-i18n="imp.before">Before · manual</div>
+        </div>
+        <div class="arw"><svg viewBox="0 0 48 24" fill="none"><path d="M2 12h40M32 4l10 8-10 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="nb to">
+          <div class="v">5<span style="font-size:0.5em">min</span></div>
+          <div class="l" data-i18n="imp.after">After · automated</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cases-head reveal">
+      <h3 data-i18n="imp.cases.t">What that looks like across sectors</h3>
+      <span class="lead-note" data-i18n="imp.cases.note">Anonymized at clients' request</span>
+    </div>
+
+    <div class="case-grid">
+      <article class="case reveal" data-delay="1">
+        <span class="case-sector" data-i18n="imp.c1.s">Commercial</span>
+        <h4 data-i18n="imp.c1.t">Scattered sales reports, one source of truth</h4>
+        <p data-i18n="imp.c1.p">Spreadsheets across regions consolidated into a single governed Power BI model the whole team trusts.</p>
+        <div class="outcome"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 8l3.5 3L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="imp.c1.o">One trusted dashboard</span></div>
+      </article>
+      <article class="case reveal" data-delay="2">
+        <span class="case-sector" data-i18n="imp.c2.s">Financial</span>
+        <h4 data-i18n="imp.c2.t">A 6-hour close routine, automated</h4>
+        <p data-i18n="imp.c2.p">A manual reconciliation that took a full morning now runs in minutes via cloud Python pipelines.</p>
+        <div class="outcome"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 8l3.5 3L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="imp.c2.o">6h → 5min</span></div>
+      </article>
+      <article class="case reveal" data-delay="3">
+        <span class="case-sector" data-i18n="imp.c3.s">Industrial</span>
+        <h4 data-i18n="imp.c3.t">Production visibility in real time</h4>
+        <p data-i18n="imp.c3.p">Operational data unified into live indicators, so the floor and management look at the same numbers.</p>
+        <div class="outcome"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 8l3.5 3L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="imp.c3.o">Live operations</span></div>
+      </article>
+      <article class="case reveal" data-delay="4">
+        <span class="case-sector" data-i18n="imp.c4.s">Marketing</span>
+        <h4 data-i18n="imp.c4.t">Channels unified, spend that pays off</h4>
+        <p data-i18n="imp.c4.p">Disconnected campaign sources brought together to read true return per channel — not vanity metrics.</p>
+        <div class="outcome"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 8l3.5 3L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="imp.c4.o">Clear ROI per channel</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATEMENT (parallax) ============================ -->
+<section class="statement" id="statement" data-screen-label="Statement">
+  <div class="st-grid" data-parallax="0.10"></div>
+  <span class="st-shape s1" data-parallax="0.26"></span>
+  <span class="st-shape s2" data-parallax="-0.20"></span>
+  <span class="st-shape s3" data-parallax="0.34"></span>
+  <span class="st-shape s4" data-parallax="-0.30"></span>
+  <div class="wrap">
+    <div class="st-inner reveal">
+      <span class="eyebrow" data-i18n="st.eyebrow">The keystone</span>
+      <h2 class="st-title">
+        <span data-i18n="st.l1">From scattered data</span>
+        <span class="gradient-text" data-i18n="st.l2">to one clear decision.</span>
+      </h2>
+      <p class="st-sub" data-i18n="st.sub">Every pipeline we build and every dashboard we ship exists for a single reason: to make the next decision obvious.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ INTELLIGENCE PORTAL (product) ============================ -->
+<section class="section portal" id="portal" data-screen-label="Intelligence Portal" data-bars>
+  <div class="portal-bg"></div>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="portal.eyebrow">Our product · Intelligence Portal</span>
+      <h2 data-i18n="portal.title">Every dashboard in one place — and the <span class="gradient-text">answers</span> behind them.</h2>
+      <p data-i18n="portal.sub">Intelligence Portal embeds your Power BI reports in a single branded portal for the whole company, then layers automated insights on top. Visualization is just where it starts.</p>
+    </div>
+
+    <div class="portal-stage">
+      <!-- COPY / value props -->
+      <div class="portal-copy reveal">
+        <ul class="portal-feats">
+          <li class="pfeat">
+            <span class="pfeat-ico">
+              <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="15" width="5" height="9" rx="1.2" stroke="currentColor" stroke-width="1.5"/><rect x="11.5" y="8" width="5" height="16" rx="1.2" stroke="currentColor" stroke-width="1.5"/><rect x="20" y="4" width="5" height="20" rx="1.2" stroke="currentColor" stroke-width="1.5"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="portal.f1.t">Power BI, embedded</h3>
+              <p data-i18n="portal.f1.p">Serve dashboards to your whole organization through one embedded capacity instead of a paid seat for every viewer — and watch your BI licensing bill drop.</p>
+            </div>
+          </li>
+          <li class="pfeat">
+            <span class="pfeat-ico">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M14 3l2.2 6.4L23 11.6l-5.4 3.4L19 22l-5-3.8L9 22l1.4-7L5 11.6l6.8-2.2L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="portal.f2.t">Answers, not just charts</h3>
+              <p data-i18n="portal.f2.p">The portal reads each report and writes the insight for you: what changed, why it matters, and what to look at next. More than visualization.</p>
+            </div>
+          </li>
+          <li class="pfeat">
+            <span class="pfeat-ico">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M14 3l9 3.4v6.1c0 5.5-3.7 9.6-9 11.5-5.3-1.9-9-6-9-11.5V6.4L14 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 14l2.8 2.6L18.5 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3 data-i18n="portal.f3.t">One governed front door</h3>
+              <p data-i18n="portal.f3.p">A single portal under your brand, with row-level security so each person sees exactly the data they should — nothing more.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="portal-actions">
+          <a href="#contact" class="btn btn-primary"><span class="dot"></span><span data-i18n="portal.cta">Request a demo</span></a>
+          <a href="portal.html" class="btn btn-ghost"><span data-i18n="portal.more">Explore the portal</span><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.5"/></svg></a>
+        </div>
+      </div>
+
+      <!-- PRODUCT MOCKUP -->
+      <div class="portal-visual reveal" data-delay="2">
+        <div class="pwin">
+          <div class="pwin-bar">
+            <span class="pdots"><i></i><i></i><i></i></span>
+            <span class="purl" data-i18n="portal.url">portal.yourcompany.com</span>
+            <span class="pwin-brand">NORVA</span>
+          </div>
+          <div class="pwin-body">
+            <aside class="pside">
+              <div class="pside-h" data-i18n="portal.nav.reports">Reports</div>
+              <a class="pitem on"><span class="pdotmark"></span><span data-i18n="portal.nav.sales">Sales</span></a>
+              <a class="pitem"><span class="pdotmark"></span><span data-i18n="portal.nav.finance">Finance</span></a>
+              <a class="pitem"><span class="pdotmark"></span><span data-i18n="portal.nav.ops">Operations</span></a>
+              <a class="pitem"><span class="pdotmark"></span><span data-i18n="portal.nav.mkt">Marketing</span></a>
+              <div class="pside-h" data-i18n="portal.nav.intel">Intelligence</div>
+              <a class="pitem"><span class="pdotmark alt"></span><span data-i18n="portal.nav.alerts">Alerts</span></a>
+            </aside>
+            <div class="pmain">
+              <div class="pmain-head">
+                <b data-i18n="portal.report.title">Sales · Overview</b>
+                <span class="ptag"><span class="pulse"></span>Power BI embed</span>
+              </div>
+              <div class="pkpis">
+                <div class="pkpi"><span class="pk-l" data-i18n="portal.k1">Revenue</span><span class="pk-v">$4.2<i>M</i></span></div>
+                <div class="pkpi"><span class="pk-l" data-i18n="portal.k2">Target</span><span class="pk-v">112<i>%</i></span></div>
+                <div class="pkpi"><span class="pk-l" data-i18n="portal.k3">Margin</span><span class="pk-v">38<i>%</i></span></div>
+              </div>
+              <div class="pchart">
+                <div class="pbar" style="--h:46%"></div>
+                <div class="pbar" style="--h:62%"></div>
+                <div class="pbar" style="--h:54%"></div>
+                <div class="pbar" style="--h:78%"></div>
+                <div class="pbar" style="--h:67%"></div>
+                <div class="pbar hi" style="--h:92%"></div>
+                <div class="pbar" style="--h:71%"></div>
+                <div class="pbar hi" style="--h:88%"></div>
+              </div>
+              <div class="pinsight">
+                <div class="pinsight-h">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.3 3.7L13 6.5l-3 2 .9 4-2.9-2.2L5.1 12.5 6 8.5l-3-2 3.7-1.3L8 1.5z" fill="currentColor"/></svg>
+                  <span data-i18n="portal.insight.h">Automated insight</span>
+                </div>
+                <p data-i18n="portal.insight.p">Revenue is <b>12% above target</b>. The dip in the South region traces to 2 accounts — worth reviewing the pipeline this week.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- floating license-savings callout -->
+        <div class="psave">
+          <div class="psave-h" data-i18n="portal.save.h">BI licensing</div>
+          <div class="psave-bars">
+            <div class="psave-col"><span class="psave-bar before"></span><small data-i18n="portal.save.before">Per-seat</small></div>
+            <div class="psave-col"><span class="psave-bar after"></span><small data-i18n="portal.save.after">Portal</small></div>
+          </div>
+          <div class="psave-cut" data-i18n="portal.save.note">Lower cost ↓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ JOURNEY ============================ -->
+<section class="section journey" id="journey" data-screen-label="Journey">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="jny.eyebrow">How an engagement starts</span>
+      <h2 data-i18n="jny.title">A clear path from first conversation to signed contract.</h2>
+      <p data-i18n="jny.sub">No pressure and no surprises. You see value before you commit — and you always know what the next step is.</p>
+    </div>
+
+    <div class="jt">
+      <div class="jt-rail"></div>
+      <div class="jt-grid">
+        <div class="jstep reveal" data-delay="1">
+          <div class="node">1</div>
+          <span class="dur" data-i18n="jny.s1.d">30 minutes</span>
+          <h4 data-i18n="jny.s1.t">First conversation</h4>
+          <p data-i18n="jny.s1.p">We understand your context, goals, and where decisions get stuck today.</p>
+        </div>
+        <div class="jstep reveal" data-delay="2">
+          <div class="node">2</div>
+          <span class="dur" data-i18n="jny.s2.d">1–2 weeks</span>
+          <h4 data-i18n="jny.s2.t">Diagnosis</h4>
+          <p data-i18n="jny.s2.p">We map data, stakeholders, and the decisions that actually matter to the business.</p>
+        </div>
+        <div class="jstep reveal" data-delay="3">
+          <div class="node">3</div>
+          <span class="dur" data-i18n="jny.s3.d">Aligned together</span>
+          <h4 data-i18n="jny.s3.t">Proposal &amp; scope</h4>
+          <p data-i18n="jny.s3.p">A clear plan with defined scope, timeline, and price. No fine print.</p>
+        </div>
+        <div class="jstep reveal" data-delay="4">
+          <div class="node">4</div>
+          <span class="dur" data-i18n="jny.s4.d">Fast</span>
+          <h4 data-i18n="jny.s4.t">Proof of value</h4>
+          <p data-i18n="jny.s4.p">A first tangible result early on, so you decide with evidence — not promises.</p>
+        </div>
+        <div class="jstep reveal" data-delay="5">
+          <div class="node">5</div>
+          <span class="dur" data-i18n="jny.s5.d">In production</span>
+          <h4 data-i18n="jny.s5.t">Implementation</h4>
+          <p data-i18n="jny.s5.p">We ship to production with governance, documentation, and your team onboard.</p>
+        </div>
+        <div class="jstep reveal" data-delay="6">
+          <div class="node">6</div>
+          <span class="dur" data-i18n="jny.s6.d">Ongoing</span>
+          <h4 data-i18n="jny.s6.t">Continuous evolution</h4>
+          <p data-i18n="jny.s6.p">We stay close, measure adoption, and evolve the solution as you grow.</p>
+        </div>
+      </div>
+
+      <div class="jt-foot reveal">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l9 3.4v6.1c0 5.5-3.7 9.6-9 11.5-5.3-1.9-9-6-9-11.5V5.4L11 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M7 11l2.8 2.6L15.5 8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p data-i18n="jny.foot"><b>You stay in control the whole way.</b> Take your time to compare and align internally — we move at the pace of a confident decision, not a rushed one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENGAGEMENT ============================ -->
+<section class="section" id="engagement" data-bars>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="eng.eyebrow">Engagement models</span>
+      <h2 data-i18n="eng.title">We run it all, or reinforce the team you already have.</h2>
+      <p data-i18n="eng.sub">A flexible spectrum, from full build to focused support.</p>
+    </div>
+
+    <div class="engage-track reveal">
+      <div class="engage-line"><div class="fill" data-w="100"></div></div>
+      <div class="engage-labels"><span data-i18n="eng.left">Full integration</span><span data-i18n="eng.right">Team augmentation</span></div>
+    </div>
+
+    <div class="engage-grid">
+      <article class="tier featured reveal" data-delay="1">
+        <div class="cap" data-i18n="tier1.cap">End-to-end</div>
+        <h3 data-i18n="tier1.t">Full integration</h3>
+        <p data-i18n="tier1.p">We own the entire data journey, from extraction to visualization.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier1.f1">Data engineering &amp; architecture</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier1.f2">Dashboards &amp; ML models</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier1.f3">Governance &amp; documentation</span></li>
+        </ul>
+      </article>
+
+      <article class="tier reveal" data-delay="2">
+        <div class="cap" data-i18n="tier2.cap">Co-build</div>
+        <h3 data-i18n="tier2.t">We build with you</h3>
+        <p data-i18n="tier2.p">Side by side with your team, accelerating delivery and raising the bar.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier2.f1">Joint squads</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier2.f2">Standards &amp; best practices</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier2.f3">Knowledge transfer</span></li>
+        </ul>
+      </article>
+
+      <article class="tier reveal" data-delay="3">
+        <div class="cap" data-i18n="tier3.cap">Augmentation</div>
+        <h3 data-i18n="tier3.t">We reinforce your team</h3>
+        <p data-i18n="tier3.p">We plug into your existing data team to unblock dashboards and automations.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier3.f1">On-demand specialists</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier3.f2">Power BI automation</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3.5 3L12 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="tier3.f3">Review &amp; optimization</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SECURITY & GOVERNANCE ============================ -->
+<section class="section security" id="security" data-screen-label="Security">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="sec.eyebrow">Security &amp; governance</span>
+      <h2 data-i18n="sec.title">Your data is treated like it's ours to protect.</h2>
+      <p data-i18n="sec.sub">Trust isn't a feature we add at the end — it's how we build from the first line of the pipeline.</p>
+    </div>
+
+    <div class="sec-grid">
+      <article class="sec reveal" data-delay="1">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v5.5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h4 data-i18n="sec.1.t">LGPD by default</h4>
+        <p data-i18n="sec.1.p">Personal data handled in line with Brazil's data protection law, from collection to access.</p>
+      </article>
+      <article class="sec reveal" data-delay="2">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4 data-i18n="sec.2.t">Row-level security</h4>
+        <p data-i18n="sec.2.p">Each person sees exactly the data they should — and nothing beyond their permission.</p>
+      </article>
+      <article class="sec reveal" data-delay="3">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4 data-i18n="sec.3.t">Access &amp; audit control</h4>
+        <p data-i18n="sec.3.p">Governed permissions with traceability — who accessed what, and when.</p>
+      </article>
+      <article class="sec reveal" data-delay="1">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12h7M9 16h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4 data-i18n="sec.4.t">Full documentation</h4>
+        <p data-i18n="sec.4.p">Nothing lives in one person's head. Models, pipelines, and rules are documented.</p>
+      </article>
+      <article class="sec reveal" data-delay="2">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.6" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4 data-i18n="sec.5.t">Isolated environments</h4>
+        <p data-i18n="sec.5.p">Separate dev, staging, and production so changes never touch live data by accident.</p>
+      </article>
+      <article class="sec reveal" data-delay="3">
+        <div class="sec-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1 1 2.3 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 20v-4h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4 data-i18n="sec.6.t">Backup &amp; traceability</h4>
+        <p data-i18n="sec.6.p">Recoverable data and a clear lineage, so you can always trust what a number means.</p>
+      </article>
+    </div>
+
+    <div class="sec-badges reveal">
+      <span class="sec-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 2.5L12 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="sec.b1">LGPD aligned</span></span>
+      <span class="sec-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 2.5L12 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="sec.b2">Role-based access</span></span>
+      <span class="sec-badge"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7.5l3 2.5L12 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="sec.b3">Documented &amp; auditable</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TEAM ============================ -->
+<section class="section team" id="team" data-screen-label="Team">
+  <div class="wrap">
+    <div class="team-top">
+      <div class="section-head reveal" style="margin-bottom:0;">
+        <span class="eyebrow" data-i18n="team.eyebrow">The people behind it</span>
+        <h2 data-i18n="team.title">A senior-only team. No juniors learning on your project.</h2>
+        <p data-i18n="team.sub">Every discipline you need to go from raw data to decision, under one roof and accountable end to end.</p>
+      </div>
+      <div class="team-stat reveal" data-delay="2">
+        <div class="ts"><span class="v"><span class="gradient-text">100%</span></span><span class="l" data-i18n="team.st1">senior profiles</span></div>
+        <div class="ts"><span class="v"><span data-to="5" data-suffix="" data-dec="0">0</span></span><span class="l" data-i18n="team.st2">core disciplines</span></div>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <article class="disc reveal" data-delay="1">
+        <div class="disc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="6" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="18" r="2.4" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="12" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M8 7l8 4M8 17l8-4" stroke="currentColor" stroke-width="1.4"/></svg></div>
+        <h4 data-i18n="team.d1.t">Data Engineering</h4>
+        <p data-i18n="team.d1.p">Pipelines, architecture, and the trusted layers everything else stands on.</p>
+      </article>
+      <article class="disc reveal" data-delay="2">
+        <div class="disc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4 data-i18n="team.d2.t">Data Science &amp; ML</h4>
+        <p data-i18n="team.d2.p">Models that turn history into foresight, from prototype to production.</p>
+      </article>
+      <article class="disc reveal" data-delay="3">
+        <div class="disc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="13" width="4" height="7" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="10" y="8" width="4" height="12" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="17" y="4" width="4" height="16" rx="1" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <h4 data-i18n="team.d3.t">BI &amp; Visualization</h4>
+        <p data-i18n="team.d3.p">Dashboards people trust and actually use — built on clean, governed models.</p>
+      </article>
+      <article class="disc reveal" data-delay="4">
+        <div class="disc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 18c0-7 4.5-12 14-12-1 6-5 11-12 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 18s2-1 4-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4 data-i18n="team.d4.t">Cloud Architecture</h4>
+        <p data-i18n="team.d4.p">Scalable, secure infrastructure on Azure and the modern data stack.</p>
+      </article>
+      <article class="disc reveal" data-delay="5">
+        <div class="disc-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h4 data-i18n="team.d5.t">Data Design</h4>
+        <p data-i18n="team.d5.p">Clarity by design — turning complexity into something a leader reads in seconds.</p>
+      </article>
+    </div>
+    <p class="team-note" data-i18n="team.note">// Real team bios and photos can be added here.</p>
+  </div>
+</section>
+
+<!-- ============================ STACK ============================ -->
+<section class="section" id="stack">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="stack.eyebrow">Technology stack</span>
+      <h2 data-i18n="stack.title">The right tools, not the trendy ones.</h2>
+      <p data-i18n="stack.sub">We work inside your ecosystem and integrate with what you already run.</p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="chip reveal" data-delay="1"><span class="badge">BI</span><span class="meta"><b>Power BI</b><small>Dashboards</small></span></div>
+      <div class="chip reveal" data-delay="1"><span class="badge">Tb</span><span class="meta"><b>Tableau</b><small>Visualization</small></span></div>
+      <div class="chip reveal" data-delay="2"><span class="badge">Py</span><span class="meta"><b>Python</b><small>Analytics</small></span></div>
+      <div class="chip reveal" data-delay="2"><span class="badge">SQL</span><span class="meta"><b>SQL</b><small>Modeling</small></span></div>
+      <div class="chip reveal" data-delay="3"><span class="badge">dbt</span><span class="meta"><b>dbt</b><small>Transforms</small></span></div>
+      <div class="chip reveal" data-delay="3"><span class="badge">Az</span><span class="meta"><b>Azure</b><small>Cloud</small></span></div>
+      <div class="chip reveal" data-delay="3"><span class="badge">AWS</span><span class="meta"><b>AWS</b><small>Cloud</small></span></div>
+      <div class="chip reveal" data-delay="1"><span class="badge">Db</span><span class="meta"><b>Databricks</b><small>Lakehouse</small></span></div>
+      <div class="chip reveal" data-delay="2"><span class="badge">Sf</span><span class="meta"><b>Snowflake</b><small>Warehouse</small></span></div>
+      <div class="chip reveal" data-delay="3"><span class="badge">Af</span><span class="meta"><b>Airflow</b><small>Orchestration</small></span></div>
+      <div class="chip reveal" data-delay="1"><span class="badge">Pd</span><span class="meta"><b>Pandas</b><small>Processing</small></span></div>
+      <div class="chip reveal" data-delay="2"><span class="badge">Sk</span><span class="meta"><b>scikit-learn</b><small>ML models</small></span></div>
+      <div class="chip reveal" data-delay="3"><span class="badge">GA4</span><span class="meta"><b>GA4 / APIs</b><small>Sources</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PARTNER BAND ============================ -->
+<section class="partner" id="partner" data-screen-label="Partner">
+  <div class="wrap partner-inner">
+    <div class="partner-badge reveal">
+      <svg viewBox="0 0 24 24" fill="none" aria-label="Microsoft">
+        <rect x="1" y="1" width="10.2" height="10.2" fill="#F25022"/>
+        <rect x="12.8" y="1" width="10.2" height="10.2" fill="#7FBA00"/>
+        <rect x="1" y="12.8" width="10.2" height="10.2" fill="#00A4EF"/>
+        <rect x="12.8" y="12.8" width="10.2" height="10.2" fill="#FFB900"/>
+      </svg>
+      <span class="pb-txt"><b data-i18n="prt.badge.b">Microsoft Partner</b><small data-i18n="prt.badge.s">Official partnership</small></span>
+    </div>
+    <div class="partner-copy reveal" data-delay="2">
+      <h3 data-i18n="prt.title">A recognized Microsoft Partner.</h3>
+      <p data-i18n="prt.p">We build inside the ecosystem most companies already run — Azure, Power BI, and Microsoft Fabric — with the backing of an official partnership. Beyond that, we work fluently across Databricks, Snowflake, and the wider modern data stack.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section faq" id="faq" data-screen-label="FAQ">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center;">
+      <span class="eyebrow" style="justify-content:center;" data-i18n="faq.eyebrow">Common questions</span>
+      <h2 data-i18n="faq.title">The questions teams ask before they commit.</h2>
+    </div>
+
+    <div class="faq-wrap">
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q1">How long until we see the first result?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a1">We design every engagement around an early proof of value, so you see something tangible quickly — usually within the first weeks — before any larger commitment.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q2">Do you replace our team or work alongside it?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a2">Either. We can own the full data journey, co-build with your people, or plug in as senior specialists to reinforce the team you already have.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q3">How do you handle the security of our data?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a3">Governance comes first: LGPD-aligned handling, row-level security, isolated environments, documented models, and full traceability of who accessed what.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q4">Will we be locked into a specific tool?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a4">No. We're tool-agnostic and integrate with what you already use. We recommend the right technology for your context — not whatever is trendy.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q5">We already have dashboards. Can you still help?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a5">Often that's where we add the most value — auditing what exists, fixing trust in the data, and turning reports people ignore into decisions they rely on.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q6">How does contracting work?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a6">After the diagnosis we present a clear proposal with defined scope, timeline, and price. You take the time you need to compare and align internally — no pressure.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q7">What size and sector of company do you serve?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a7">We work across commercial, financial, marketing, and industrial operations — from teams taking their first structured step to organizations scaling a mature data practice.</p></div>
+      </details>
+      <details class="faq-item reveal" data-delay="1">
+        <summary><span data-i18n="faq.q8">What happens after delivery?</span><span class="faq-sign"></span></summary>
+        <div class="faq-body"><p data-i18n="faq.a8">We don't disappear. We measure adoption, support your team, and evolve the solution as your business changes — that's the whole point.</p></div>
+      </details>
+    </div>
+
+    <div class="faq-cta reveal">
+      <p data-i18n="faq.cta.p">Still have a question that isn't here?</p>
+      <a href="#contact" class="btn btn-primary"><span class="dot"></span><span data-i18n="faq.cta.btn">Talk to us</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="about.eyebrow">About Norva</span>
+      <p class="about-statement" style="margin-top:24px;" data-i18n="about.statement">We turn raw data into the direction your business runs on.</p>
+      <p style="color:var(--text-dim);margin-top:26px;max-width:50ch;text-wrap:pretty;" data-i18n="about.p">Norva comes from <em>north</em> and <em>value</em> — the journey from raw data to the right decision. We don't just process data; we point organizations in a direction. Part of <strong>Kystone Group</strong>, we're a small, senior team of engineers, data scientists, and designers who care as much about culture as we do about code.</p>
+    </div>
+    <div class="about-stats reveal" data-delay="2">
+      <div class="cell"><div class="num"><span class="gradient-text">E2E</span></div><div class="lbl" data-i18n="about.n1">raw data to decision</div></div>
+      <div class="cell"><div class="num"><span data-to="3" data-suffix="" data-dec="0">0</span></div><div class="lbl" data-i18n="about.n2">core stacks mastered</div></div>
+      <div class="cell"><div class="num"><span data-to="100" data-suffix="%">0</span></div><div class="lbl" data-i18n="about.n3">focus on real adoption</div></div>
+      <div class="cell"><div class="num"><span class="gradient-text">∞</span></div><div class="lbl" data-i18n="about.n4">embedded in your team</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="section contact" id="contact">
+  <div class="contact-bg"></div>
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Let's build</span>
+        <h2 style="margin-top:22px;" data-i18n="contact.title">Ready to make better decisions?</h2>
+        <p class="lead" data-i18n="contact.lead">Tell us the challenge. We'll come back with a clear plan within two business days.</p>
+        <div class="contact-meta">
+          <a href="mailto:hello@norva.com"><span data-i18n="contact.email">Write to</span> hello@norva.com</a>
+          <a href="#"><span data-i18n="contact.based">Based</span> &nbsp;<span data-i18n="contact.based.v">Remote · Brazil &amp; global</span></a>
+        </div>
+      </div>
+
+      <form class="form reveal" data-delay="2" id="contactForm">
+        <div class="field-row">
+          <div class="field"><label data-i18n="form.name">Name</label><input type="text" required /></div>
+          <div class="field"><label data-i18n="form.company">Company</label><input type="text" /></div>
+        </div>
+        <div class="field"><label data-i18n="form.email">Work email</label><input type="email" required /></div>
+        <div class="field">
+          <label data-i18n="form.scope">How can we help?</label>
+          <select>
+            <option data-i18n="form.scope.0">Complete data integration</option>
+            <option data-i18n="form.scope.1">Power BI / Tableau dashboards</option>
+            <option data-i18n="form.scope.2">Data engineering &amp; pipelines</option>
+            <option data-i18n="form.scope.3">Data science &amp; ML</option>
+            <option data-i18n="form.scope.4">Augment our existing team</option>
+          </select>
+        </div>
+        <div class="field"><label data-i18n="form.msg">Message</label><textarea data-i18n-ph="form.msg.ph" placeholder="Tell us a bit about your data context…"></textarea></div>
+        <button type="submit" class="btn btn-primary"><span class="dot"></span><span data-i18n="form.submit">Send message</span></button>
+        <p class="form-note" data-i18n="form.note">No spam. Your message goes straight to the founders.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="ok"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11.5l4.5 4L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4 data-i18n="form.ok.t">Message sent</h4>
+        <p data-i18n="form.ok.p">Thanks, we'll be back to you within two business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div style="max-width:300px;">
+        <a class="brand" href="#top" style="margin-bottom:18px;">
+          <svg class="mark" viewBox="0 0 64 64" fill="none"><path d="M32 2 L37.7 26.3 L58 32 L37.7 37.7 L32 62 L26.3 37.7 L6 32 L26.3 26.3 Z" fill="url(#kg)" /></svg>
+          <span class="wordmark norva">nor<span>va</span></span>
+        </a>
+        <p style="color:var(--text-dim);font-size:14px;margin-top:8px;" data-i18n="footer.tagline">North star intelligence for your business.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5 data-i18n="footer.c1">Company</h5>
+          <a href="#about" data-i18n="foot.about">About</a>
+          <a href="#approach" data-i18n="foot.approach">Approach</a>
+          <a href="#engagement" data-i18n="foot.engage">Engagement</a>
+          <a href="#contact" data-i18n="foot.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.c2">Services</h5>
+          <a href="#services" data-i18n="foot.powerbi">Power BI</a>
+          <a href="#services" data-i18n="foot.python">Python</a>
+          <a href="#services" data-i18n="foot.tableau">Tableau</a>
+          <a href="#services" data-i18n="foot.ml">Machine Learning</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footer.c3">Connect</h5>
+          <a href="mailto:hello@norva.com">hello@norva.com</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.rights">© 2026 Norva — a Kystone Group company. All rights reserved.</span>
+      <span data-i18n="footer.crafted">Built on data, not guesses.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js?v=4"></script>
+</body>
+</html>
