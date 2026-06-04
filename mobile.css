@@ -1,0 +1,235 @@
+/* ============================================================
+   NORVA — MOBILE OPTIMIZATION LAYER
+   ------------------------------------------------------------
+   Loaded AFTER styles.css / portal-page.css.
+
+   Everything that changes layout is scoped to (max-width: 720px)
+   so the shipped desktop design is byte-for-byte untouched.
+   The few global rules at the top are visually inert on desktop
+   (tap-highlight removal, text-size lock, the menu-lock helper,
+   and the hamburger's close-icon — which is display:none there).
+   ============================================================ */
+
+/* ---------- global, desktop-inert ---------- */
+* { -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body.menu-lock { overflow: hidden; }
+
+/* hamburger ⇄ close icon swap (the toggle is display:none on desktop) */
+.nav-toggle .ico-close { display: none; }
+.nav.menu-open .nav-toggle .ico-menu { display: none; }
+.nav.menu-open .nav-toggle .ico-close { display: block; }
+
+@keyframes navDrop {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   MOBILE  (<= 720px)
+   ============================================================ */
+@media (max-width: 720px) {
+
+  :root { --gutter: clamp(16px, 5vw, 26px); }
+
+  /* keep anchored sections clear of the fixed nav */
+  html { scroll-padding-top: 78px; }
+
+  /* honor notches / rounded corners on the inline gutters */
+  .wrap { padding-inline: max(var(--gutter), env(safe-area-inset-left)); }
+
+  /* ----------------------------------------------------------
+     NAV  →  collapsible mobile menu
+     Bar shows only [brand] + [hamburger]; links, language and
+     CTA live in the panel that drops down when opened.
+     ---------------------------------------------------------- */
+  .nav {
+    flex-wrap: wrap;
+    row-gap: 0;
+    padding-block: 11px;
+    padding-top: max(11px, env(safe-area-inset-top));
+  }
+  .nav .brand { order: 1; }
+
+  .nav .nav-toggle {
+    order: 2;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: var(--surface);
+  }
+
+  /* both panels span full width and sit below the bar */
+  .nav .nav-links,
+  .nav .nav-right { order: 3; flex-basis: 100%; }
+
+  /* collapsed by default */
+  .nav .nav-links,
+  .nav .nav-right { display: none; }
+
+  /* opened state — solid, blurred, scrollable if tall */
+  .nav.menu-open {
+    background: rgba(246, 247, 251, 0.92);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+    max-height: 100svh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  .nav.menu-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line-soft);
+    animation: navDrop 0.26s var(--ease);
+  }
+  .nav.menu-open .nav-links a {
+    font-size: 16px;
+    padding: 14px 12px;
+    border-radius: 10px;
+  }
+
+  .nav.menu-open .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 14px;
+    margin-top: 14px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line-soft);
+    animation: navDrop 0.3s var(--ease);
+  }
+  .nav.menu-open .nav-right .lang button { padding: 9px 15px; font-size: 12px; }
+  .nav.menu-open .nav-right .home-link { padding: 11px 15px; }
+  .nav.menu-open .nav-right .btn-primary {
+    flex: 1;
+    justify-content: center;
+    min-width: 160px;
+    padding-block: 14px;
+  }
+
+  /* ----------------------------------------------------------
+     RHYTHM & TYPOGRAPHY — tighten the generous desktop spacing
+     ---------------------------------------------------------- */
+  .section { padding-block: clamp(56px, 13vw, 96px); }
+  .section-head { margin-bottom: clamp(32px, 8vw, 52px); }
+
+  /* forms — 16px keeps iOS from zooming on focus */
+  .field input,
+  .field textarea,
+  .field select { font-size: 16px; }
+
+  /* denser tap-friendly footer links */
+  .footer { padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+  .footer-cols { gap: 30px 40px; }
+  .footer-col a { padding-block: 9px; }
+
+  /* CTAs comfortable on touch */
+  .hero-cta .btn,
+  .portal-actions .btn { justify-content: center; }
+
+  /* ----------------------------------------------------------
+     HERO (landing)
+     ---------------------------------------------------------- */
+  .hero { padding-top: 94px; min-height: auto; }
+  .panel { max-width: 100%; padding: 16px; }
+  .kpis { gap: 8px; }
+  .kpi { padding: 11px 10px; }
+
+  /* ----------------------------------------------------------
+     PORTAL page
+     ---------------------------------------------------------- */
+  .phero { padding-top: 98px; }
+  .phero .pwin-body { min-height: 300px; }
+  .pcta .hero-cta { justify-content: center; }
+}
+
+/* ============================================================
+   SMALL PHONES  (<= 480px) — stack CTAs to full width
+   ============================================================ */
+@media (max-width: 480px) {
+  .hero-cta,
+  .portal-actions,
+  .pcta .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-cta .btn,
+  .portal-actions .btn,
+  .pcta .hero-cta .btn,
+  .faq-cta .btn { width: 100%; }
+
+  .kpi .val { font-size: 18px; }
+  .panel { padding: 14px; }
+}
+
+/* ============================================================
+   PRODUCT WINDOW MOCKUP  (.pwin)
+   Shared by the landing #portal section and the portal-page hero.
+   The desktop version only shrinks on small screens, leaving the
+   report rail and KPIs cramped — and the floating savings card
+   absolutely-positioned. These rules make it genuinely adapt.
+   ============================================================ */
+@media (max-width: 720px) {
+  /* drop the "BI licensing" card into normal flow, centered below
+     the window, so it never overlaps or pushes the layout sideways */
+  .psave {
+    position: static;
+    left: auto;
+    bottom: auto;
+    width: auto;
+    max-width: 220px;
+    margin: 16px auto 0;
+  }
+  .portal-visual { overflow: visible; }
+}
+
+@media (max-width: 560px) {
+  /* stack the window: the report rail becomes a scrollable pill row
+     on top, the report itself fills the full width beneath it */
+  .pwin-body,
+  .phero .pwin-body {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .pside {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-right: none;
+    border-bottom: 1px solid var(--line-soft);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pside::-webkit-scrollbar { display: none; }
+  .pside-h { display: none; }
+  .pitem {
+    flex: none;
+    white-space: nowrap;
+    padding: 8px 13px;
+    border: 1px solid var(--line-soft);
+    border-radius: 100px;
+  }
+  .pitem.on { border-color: rgba(47, 107, 255, 0.3); }
+
+  .pmain { padding: 16px; gap: 12px; }
+  .pkpis { gap: 8px; }
+  .pk-v { font-size: 19px; }
+
+  /* window chrome: keep the URL from overflowing its bar */
+  .purl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .pwin-brand { display: none; }
+}
