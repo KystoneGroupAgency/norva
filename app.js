@@ -171,10 +171,6 @@
     "team.d4.p": "Infraestrutura escalável e segura no Azure e no stack de dados moderno.",
     "team.d5.t": "Design de Dados",
     "team.d5.p": "Clareza por design — transformando complexidade em algo que um líder lê em segundos.",
-    "prt.badge.b": "Microsoft Partner",
-    "prt.badge.s": "Parceria oficial",
-    "prt.title": "Microsoft Partner reconhecida.",
-    "prt.p": "Construímos dentro do ecossistema que a maioria das empresas já usa — Azure, Power BI e Microsoft Fabric — com o respaldo de uma parceria oficial. Além disso, trabalhamos com fluência em Databricks, Snowflake e no stack de dados moderno.",
 
     "faq.eyebrow": "Perguntas frequentes",
     "faq.title": "As perguntas que os times fazem antes de fechar.",

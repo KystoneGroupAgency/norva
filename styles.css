@@ -563,10 +563,10 @@ body::after {
   width: clamp(46px, 5vw, 64px);
   height: clamp(46px, 5vw, 64px);
   display: block;
-  filter: saturate(0.92);
+  filter: grayscale(1) opacity(0.55);
   transition: filter 0.4s, transform 0.5s var(--ease);
 }
-.bl-inner:hover .bl-logo { filter: none; transform: translateY(-3px) scale(1.05); }
+.bl-inner:hover .bl-logo { filter: grayscale(1) opacity(0.9); transform: translateY(-3px) scale(1.05); }
 .bl-meta { text-align: center; display: flex; flex-direction: column; gap: 4px; }
 .bl-name { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: -0.01em; color: var(--text); }
 .bl-sub { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; color: var(--text-mute); text-transform: uppercase; }
@@ -861,19 +861,6 @@ body::after {
 .team-note { margin-top: 22px; font-family: var(--mono); font-size: 11px; color: var(--text-mute); letter-spacing: 0.04em; }
 
 /* ============================================================
-   PARTNER BAND — Microsoft Partner credential
-   ============================================================ */
-.partner { background: var(--bg-2); border-block: 1px solid var(--line-soft); padding-block: clamp(50px, 6vw, 84px); }
-.partner-inner { display: grid; grid-template-columns: auto 1fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
-.partner-badge { display: flex; align-items: center; gap: 18px; padding: 24px 30px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
-.partner-badge svg { width: 46px; height: 46px; flex: none; }
-.partner-badge .pb-txt { display: flex; flex-direction: column; line-height: 1.15; }
-.partner-badge .pb-txt b { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: -0.01em; }
-.partner-badge .pb-txt small { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-mute); margin-top: 4px; }
-.partner-copy h3 { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 2.2vw, 30px); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 12px; text-wrap: balance; }
-.partner-copy p { color: var(--text-dim); font-size: 15.5px; line-height: 1.6; max-width: 60ch; text-wrap: pretty; }
-
-/* ============================================================
    FAQ — objection handling
    ============================================================ */
 .faq-wrap { max-width: 880px; margin: clamp(40px, 5vw, 60px) auto 0; }
@@ -910,7 +897,6 @@ body::after {
   .sec-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .team-top { grid-template-columns: 1fr; align-items: start; gap: 24px; }
-  .partner-inner { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .case-grid { grid-template-columns: 1fr; }
