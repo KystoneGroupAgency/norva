@@ -76,7 +76,7 @@
     "why.b.h": "O jeito Norva",
     "why.b.tag": "Nosso padrão",
     "why.b.1": "Ficamos até a adoção realmente acontecer.",
-    "why.b.2": "Time 100% sênior, do diagnóstico à produção.",
+    "why.b.2": "Profissionais experientes em cada etapa, do diagnóstico à produção.",
     "why.b.3": "Entendemos a decisão antes de tocar no dado.",
     "why.b.4": "Agnósticos de ferramenta — integramos com o que você tem.",
     "why.b.5": "Governança e documentação desde o dia 1.",
@@ -158,9 +158,8 @@
     "sec.b3": "Documentado & auditável",
 
     "team.eyebrow": "As pessoas por trás",
-    "team.title": "Um time 100% sênior. Nenhum júnior aprendendo no seu projeto.",
+    "team.title": "As pessoas por trás. Cada disciplina que você precisa.",
     "team.sub": "Toda disciplina necessária para ir do dado bruto à decisão, sob o mesmo teto e responsável de ponta a ponta.",
-    "team.st1": "perfis sêniores",
     "team.st2": "disciplinas centrais",
     "team.d1.t": "Engenharia de Dados",
     "team.d1.p": "Pipelines, arquitetura e as camadas confiáveis sobre as quais tudo se apoia.",
@@ -172,8 +171,6 @@
     "team.d4.p": "Infraestrutura escalável e segura no Azure e no stack de dados moderno.",
     "team.d5.t": "Design de Dados",
     "team.d5.p": "Clareza por design — transformando complexidade em algo que um líder lê em segundos.",
-    "team.note": "// Bios e fotos reais do time podem ser adicionadas aqui.",
-
     "prt.badge.b": "Microsoft Partner",
     "prt.badge.s": "Parceria oficial",
     "prt.title": "Microsoft Partner reconhecida.",
@@ -184,7 +181,7 @@
     "faq.q1": "Em quanto tempo vemos o primeiro resultado?",
     "faq.a1": "Desenhamos cada projeto em torno de uma prova de valor inicial, para você ver algo tangível rápido — normalmente nas primeiras semanas — antes de qualquer compromisso maior.",
     "faq.q2": "Vocês substituem nosso time ou trabalham junto?",
-    "faq.a2": "Os dois. Podemos assumir toda a jornada de dados, co-construir com o seu pessoal ou entrar como especialistas sêniores para reforçar o time que você já tem.",
+    "faq.a2": "Os dois. Podemos assumir toda a jornada de dados, co-construir com o seu pessoal ou entrar como especialistas para reforçar o time que você já tem.",
     "faq.q3": "Como vocês tratam a segurança dos nossos dados?",
     "faq.a3": "Governança em primeiro lugar: tratamento alinhado à LGPD, segurança em nível de linha, ambientes isolados, modelos documentados e rastreabilidade total de quem acessou o quê.",
     "faq.q4": "Vamos ficar presos a uma ferramenta específica?",
@@ -293,7 +290,7 @@
 
     "about.eyebrow": "Sobre a Norva",
     "about.statement": "Transformamos dado bruto na direção que o seu negócio segue.",
-    "about.p": "Norva nasce de norte e valor — a jornada do dado bruto até a decisão certa. Não apenas processamos dados; orientamos organizações. Parte do <strong>Kystone Group</strong>, somos um time pequeno e sênior de engenheiros, cientistas de dados e designers que se importa tanto com a cultura quanto com o código.",
+    "about.p": "Norva nasce de norte e valor — a jornada do dado bruto até a decisão certa. Não apenas processamos dados; orientamos organizações. Parte do <strong>Kystone Group</strong>, somos um time pequeno de engenheiros, cientistas de dados e designers que se importa tanto com a cultura quanto com o código.",
     "about.n1": "do dado bruto à decisão",
     "about.n2": "stacks principais dominados",
     "about.n3": "foco em adoção real",
@@ -365,8 +362,8 @@
   document.querySelectorAll(".lang button").forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
-  var saved = "en";
-  try { saved = localStorage.getItem("kystone_lang") || "en"; } catch (e) {}
+  var saved = "pt";
+  try { saved = localStorage.getItem("kystone_lang") || "pt"; } catch (e) {}
   setLang(saved);
 
   /* ----------------------------------------------------------

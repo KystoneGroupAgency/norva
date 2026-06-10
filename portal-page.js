@@ -146,8 +146,8 @@
   document.querySelectorAll(".lang button").forEach(function (b) {
     b.addEventListener("click", function () { setLang(b.dataset.lang); });
   });
-  var saved = "en";
-  try { saved = localStorage.getItem("kystone_lang") || "en"; } catch (e) {}
+  var saved = "pt";
+  try { saved = localStorage.getItem("kystone_lang") || "pt"; } catch (e) {}
   setLang(saved);
 
   /* ---------- nav scroll state ---------- */
