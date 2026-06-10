@@ -57,6 +57,9 @@
     "feat.s.py": "Analytics & ML",
     "feat.s.spark": "Big data",
     "feat.s.claude": "IA generativa",
+    "feat.s.bq": "Big Data",
+    "feat.s.sql": "Modelagem",
+    "feat.s.mlops": "ML em produção",
 
     "nav.results": "Resultados",
     "nav.security": "Segurança",
