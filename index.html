@@ -1,9 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Norva · Data that turns into decisions</title>
+<title>Norva · Dados que viram decisões — Power BI, Python, Tableau & ML</title>
+
+<!-- ============================ SEO ============================ -->
+<meta name="description" content="A Norva entra na rotina do seu time para desenhar dashboards, construir pipelines de dados e treinar modelos de machine learning em Power BI, Python e Tableau." />
+<meta name="keywords" content="business intelligence, power bi, dashboards, engenharia de dados, ciência de dados, machine learning, python, tableau, bigquery, sql, mlops, consultoria de dados" />
+<meta name="author" content="Norva" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="theme-color" content="#f6f7fb" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="canonical" href="https://norva.cloud/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Norva" />
+<meta property="og:url" content="https://norva.cloud/" />
+<meta property="og:title" content="Norva · Dados que viram decisões" />
+<meta property="og:description" content="Dashboards, pipelines de dados e modelos de machine learning em Power BI, Python e Tableau — do diagnóstico à adoção." />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Norva · Dados que viram decisões" />
+<meta name="twitter:description" content="Dashboards, pipelines de dados e modelos de machine learning em Power BI, Python e Tableau — do diagnóstico à adoção." />
+
+<!-- Structured data: Organization + Services -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://norva.cloud/#organization",
+  "name": "Norva",
+  "alternateName": "Norva Data Intelligence Studio",
+  "url": "https://norva.cloud/",
+  "email": "hello@norva.cloud",
+  "description": "Estúdio de inteligência de dados: dashboards, engenharia de dados e machine learning em Power BI, Python e Tableau.",
+  "areaServed": "BR",
+  "knowsLanguage": ["pt-BR", "en"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de dados",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dashboards em Power BI" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics & Automação em Python" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visualização em Tableau" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Engenharia de Dados" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ciência de Dados & Machine Learning" } }
+    ]
+  }
+}
+</script>
+
+<!-- Structured data: WebSite + WebPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://norva.cloud/#website",
+      "url": "https://norva.cloud/",
+      "name": "Norva",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://norva.cloud/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://norva.cloud/#webpage",
+      "url": "https://norva.cloud/",
+      "name": "Norva · Dados que viram decisões",
+      "description": "Dashboards, pipelines de dados e modelos de machine learning em Power BI, Python e Tableau.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://norva.cloud/#website" },
+      "about": { "@id": "https://norva.cloud/#organization" }
+    }
+  ]
+}
+</script>
+
+<!-- Structured data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Em quanto tempo vemos o primeiro resultado?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Desenhamos cada projeto em torno de uma prova de valor inicial, para você ver algo tangível rápido — normalmente nas primeiras semanas — antes de qualquer compromisso maior." }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês substituem nosso time ou trabalham junto?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Os dois. Podemos assumir toda a jornada de dados, co-construir com o seu pessoal ou entrar como especialistas para reforçar o time que você já tem." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como vocês tratam a segurança dos nossos dados?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Governança em primeiro lugar: tratamento alinhado à LGPD, segurança em nível de linha, ambientes isolados, modelos documentados e rastreabilidade total de quem acessou o quê." }
+    },
+    {
+      "@type": "Question",
+      "name": "Vamos ficar presos a uma ferramenta específica?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. Somos agnósticos de ferramenta e integramos com o que você já usa. Recomendamos a tecnologia certa para o seu contexto — não a que está na moda." }
+    },
+    {
+      "@type": "Question",
+      "name": "Já temos dashboards. Vocês ainda ajudam?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Muitas vezes é onde mais agregamos — auditando o que existe, restaurando a confiança no dado e transformando relatórios ignorados em decisões em que se confia." }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a contratação?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Após o diagnóstico, apresentamos uma proposta clara com escopo, prazo e preço definidos. Você leva o tempo que precisar para comparar e alinhar internamente — sem pressão." }
+    },
+    {
+      "@type": "Question",
+      "name": "Que porte e setor de empresa vocês atendem?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Atuamos em operações comerciais, financeiras, de marketing e industriais — de times dando o primeiro passo estruturado a organizações escalando uma prática de dados madura." }
+    },
+    {
+      "@type": "Question",
+      "name": "O que acontece depois da entrega?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não desaparecemos. Medimos a adoção, apoiamos seu time e evoluímos a solução conforme o negócio muda — esse é o ponto." }
+    }
+  ]
+}
+</script>
+
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f6bff'/%3E%3Cstop offset='1' stop-color='%2307b39b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M32 2 L37.7 26.3 L58 32 L37.7 37.7 L32 62 L26.3 37.7 L6 32 L26.3 26.3 Z' fill='url(%23g)'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
