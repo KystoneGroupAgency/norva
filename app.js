@@ -661,18 +661,6 @@
   }
 
   /* ----------------------------------------------------------
-     9. Contact form (fake submit)
-     ---------------------------------------------------------- */
-  var form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      form.style.display = "none";
-      document.getElementById("formSuccess").classList.add("show");
-    });
-  }
-
-  /* ----------------------------------------------------------
      10. Smooth anchor + mobile menu (simple)
      ---------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
