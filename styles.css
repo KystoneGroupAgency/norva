@@ -616,6 +616,9 @@ body::after {
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form .btn-primary { width: 100%; justify-content: center; margin-top: 8px; }
 .form-note { font-family: var(--mono); font-size: 11px; color: var(--text-mute); margin-top: 14px; text-align: center; }
+.form-consent label { display: flex; gap: 9px; align-items: flex-start; font-family: var(--sans); font-size: 12px; line-height: 1.45; letter-spacing: 0; text-transform: none; }
+.form-consent input { width: auto; margin: 2px 0 0; accent-color: var(--accent); }
+.form-honeypot { position: absolute; left: -9999px; }
 .form-success { display:none; text-align:center; padding: 20px 0; }
 .form-success.show { display:block; }
 .form-success .ok { width: 52px; height: 52px; border-radius: 50%; background: rgba(7,179,155,0.12); display:grid; place-items:center; margin: 0 auto 18px; color: var(--accent-2); }

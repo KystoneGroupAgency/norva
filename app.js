@@ -310,8 +310,10 @@
     "form.scope.2": "Engenharia de dados & pipelines",
     "form.scope.3": "Ciência de dados & ML",
     "form.scope.4": "Reforço ao time existente",
+    "form.scope.5": "Outro",
     "form.msg": "Mensagem",
     "form.msg.ph": "Conte um pouco sobre o seu contexto de dados…",
+    "form.consent": "Concordo que a Norva entre em contato sobre esta solicitação.",
     "form.submit": "Enviar mensagem",
     "form.note": "Sem spam. Sua mensagem vai direto para os fundadores.",
     "form.ok.t": "Mensagem enviada",
@@ -465,6 +467,51 @@
     window.addEventListener("scroll", onParallaxScroll, { passive: true });
     window.addEventListener("resize", onParallaxScroll);
     applyParallax();
+  }
+
+  /* ----------------------------------------------------------
+     9. Contact form (HubSpot)
+     ---------------------------------------------------------- */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      if (data.get("website")) return;
+
+      var name = (data.get("name") || "").trim().split(/\s+/);
+      var button = form.querySelector('button[type="submit"]');
+      button.disabled = true;
+
+      try {
+        var response = await fetch("https://api.hsforms.com/submissions/v3/integration/submit/51846094/b42a3450-04db-45d6-abf7-0530c8ad8724", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fields: [
+              { name: "firstname", value: name.shift() || "" },
+              { name: "lastname", value: name.join(" ") },
+              { name: "email", value: data.get("email") || "" },
+              { name: "company", value: data.get("company") || "" },
+              { name: "servico", value: data.get("servico") || "" },
+              { name: "mensagem", value: data.get("mensagem") || "" }
+            ],
+            legalConsentOptions: {
+              consent: {
+                consentToProcess: true,
+                text: "I agree that Norva may contact me about this request."
+              }
+            }
+          })
+        });
+        if (!response.ok) throw new Error("HubSpot submission failed");
+        form.style.display = "none";
+        document.getElementById("formSuccess").classList.add("show");
+      } catch (error) {
+        button.disabled = false;
+        alert("We couldn't send your message. Please try again or email hello@norva.cloud.");
+      }
+    });
   }
 
   /* ----------------------------------------------------------

@@ -1075,8 +1075,34 @@
         </div>
       </div>
 
-      <div class="form reveal" data-delay="2" id="contactForm">
-        <div class="hs-form-frame" data-region="na1" data-form-id="b42a3450-04db-45d6-abf7-0530c8ad8724" data-portal-id="51846094"></div>
+      <form class="form reveal" data-delay="2" id="contactForm">
+        <div class="field-row">
+          <div class="field"><label data-i18n="form.name">Name</label><input name="name" type="text" autocomplete="name" required /></div>
+          <div class="field"><label data-i18n="form.company">Company</label><input name="company" type="text" autocomplete="organization" /></div>
+        </div>
+        <div class="field"><label data-i18n="form.email">Work email</label><input name="email" type="email" autocomplete="email" required /></div>
+        <div class="field">
+          <label data-i18n="form.scope">How can we help?</label>
+          <select name="servico">
+            <option value="Complete data integration" data-i18n="form.scope.0">Complete data integration</option>
+            <option value="Power BI / Tableau dashboards" data-i18n="form.scope.1">Power BI / Tableau dashboards</option>
+            <option value="Data engineering &amp; pipelines" data-i18n="form.scope.2">Data engineering &amp; pipelines</option>
+            <option value="Data science &amp; ML" data-i18n="form.scope.3">Data science &amp; ML</option>
+            <option value="Augment our existing team" data-i18n="form.scope.4">Augment our existing team</option>
+            <option value="Other" data-i18n="form.scope.5">Other</option>
+          </select>
+        </div>
+        <div class="field"><label data-i18n="form.msg">Message</label><textarea name="mensagem" data-i18n-ph="form.msg.ph" placeholder="Tell us a bit about your data context…"></textarea></div>
+        <div class="field form-consent"><label><input name="consent" type="checkbox" required /> <span data-i18n="form.consent">I agree that Norva may contact me about this request.</span></label></div>
+        <div class="form-honeypot" aria-hidden="true"><label>Website<input name="website" type="text" tabindex="-1" autocomplete="off" /></label></div>
+        <button type="submit" class="btn btn-primary"><span class="dot"></span><span data-i18n="form.submit">Send message</span></button>
+        <p class="form-note" data-i18n="form.note">No spam. Your message goes straight to the founders.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="ok"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11.5l4.5 4L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4 data-i18n="form.ok.t">Message sent</h4>
+        <p data-i18n="form.ok.p">Thanks, we'll be back to you within two business days.</p>
       </div>
     </div>
   </div>
@@ -1123,7 +1149,6 @@
   </div>
 </footer>
 
-<script src="https://js.hsforms.net/forms/embed/51846094.js" defer></script>
 <script src="app.js?v=4"></script>
 </body>
 </html>
