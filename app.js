@@ -25,6 +25,9 @@
     "hero.cta1": "Mapear meu próximo passo",
     "hero.cta2": "Conhecer o método",
     "hero.scroll": "Role para explorar",
+    "hero.meta": "Dados → direção",
+    "hero.proof": "Resultado real",
+    "hero.proof.note": "rotina financeira automatizada",
 
     "panel.title": "Painel executivo",
     "panel.live": "Ao vivo",
@@ -229,9 +232,9 @@
     "st.sub": "Cada pipeline que construímos e cada dashboard que entregamos existe por um único motivo: tornar a próxima decisão óbvia.",
 
     "nav.portal": "Portal",
-    "portal.eyebrow": "Uma forma de entregar",
-    "portal.title": "Um portal é resultado — não o <span class=\"gradient-text\">ponto de partida.</span>",
-    "portal.sub": "Quando uma visão única e governada é a resposta certa, o Portal de Inteligência reúne relatórios e insights. Mas ele só vem depois de entendermos a decisão que precisa melhorar.",
+    "portal.eyebrow": "O produto principal da Norva",
+    "portal.title": "Intelligence Portal. Toda a empresa olhando para a <span class=\"gradient-text\">mesma verdade.</span>",
+    "portal.sub": "Nossa principal plataforma de dados reúne relatórios Power BI, insights escritos, alertas e governança em um único ambiente com a sua marca — sem uma licença por usuário para cada pessoa.",
     "portal.f1.t": "Power BI, embedado",
     "portal.f1.p": "Entregue dashboards para toda a organização através de uma única capacidade embedada, em vez de uma licença paga por usuário — e veja o custo de licenças de BI cair.",
     "portal.f2.t": "Respostas, não só gráficos",
@@ -740,7 +743,7 @@
     });
     // close on Escape, and whenever we grow back to desktop width
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-    window.addEventListener("resize", function () { if (window.innerWidth > 720) closeMenu(); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 900) closeMenu(); });
   }
 
   /* ----------------------------------------------------------

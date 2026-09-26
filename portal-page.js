@@ -17,7 +17,7 @@
     "pp.nav.reports": "Relatórios",
 
     "pp.hero.eyebrow": "O produto da Norva",
-    "pp.hero.h1": "Power BI para a empresa inteira. <span class=\"gradient-text\">Respostas</span> para o negócio.",
+    "pp.hero.h1": "Intelligence Portal. <span class=\"gradient-text\">Respostas</span> para a empresa inteira.",
     "pp.hero.sub": "O Portal de Inteligência embute todos os relatórios do Power BI em um único portal com a sua marca, troca a licença por usuário por capacidade embedada e transforma cada dashboard em um insight escrito. O produto de dados em que a sua organização inteira realmente faz login.",
     "pp.hero.cta1": "Solicitar uma demo",
     "pp.hero.cta2": "Ver como funciona",

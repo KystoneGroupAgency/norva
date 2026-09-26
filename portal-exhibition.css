@@ -1,0 +1,382 @@
+/* Norva Intelligence Portal — editorial product exhibition. */
+
+body { background: var(--ex-bg); }
+
+/* Portal navigation keeps the same calm system as the main site. */
+.nav-links a:nth-child(4) { display: block; }
+.nav .home-link {
+  padding: 4px 0 5px;
+  border: 0;
+  border-bottom: 1px solid var(--ex-line);
+  border-radius: 0;
+  color: var(--ex-ink);
+}
+.product-tag {
+  margin-top: 4px;
+  color: var(--ex-faint);
+  font-size: 8px;
+  letter-spacing: .2em;
+}
+
+/* Product hero: oversized proposition with the product itself in the field. */
+.phero {
+  min-height: 100svh;
+  padding: 82px 0 0;
+  background: var(--ex-bg);
+  border-bottom: 1px solid var(--ex-line);
+}
+.phero-bg,
+.phero-grid { display: none; }
+.phero .wrap {
+  position: relative;
+  display: block;
+  min-height: calc(100svh - 82px);
+  padding-inline: var(--gutter);
+}
+.phero-copy { position: static; max-width: none; }
+.phero h1 {
+  position: absolute;
+  z-index: 4;
+  top: clamp(86px, 13vh, 132px);
+  left: var(--gutter);
+  right: var(--gutter);
+  max-width: 12.5ch;
+  margin: 0;
+  color: var(--ex-ink);
+  font-size: clamp(66px, 8.3vw, 122px);
+  font-weight: 500;
+  line-height: .88;
+  letter-spacing: -.072em;
+  text-wrap: balance;
+}
+.phero h1 .gradient-text { color: var(--ex-blue) !important; }
+.phero .lead {
+  position: absolute;
+  z-index: 5;
+  bottom: 68px;
+  left: var(--gutter);
+  width: min(370px, 31vw);
+  margin: 0;
+  color: var(--ex-faint);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.phero .hero-cta {
+  position: absolute;
+  z-index: 6;
+  right: var(--gutter);
+  bottom: 58px;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  gap: 18px;
+}
+.phero .hero-cta .btn {
+  width: auto;
+  min-height: 0;
+  padding: 5px 0;
+  border: 0;
+  border-bottom: 1px solid var(--ex-line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ex-ink);
+  box-shadow: none;
+}
+.phero .hero-cta .btn:hover { color: var(--ex-blue); background: transparent; transform: none; }
+.phero .portal-visual {
+  position: absolute;
+  z-index: 2;
+  top: 51%;
+  right: 6vw;
+  width: min(54vw, 760px);
+  transform: translateY(-35%);
+  opacity: .94;
+}
+.phero .pwin {
+  border-radius: 0;
+  border-color: var(--ex-line);
+  box-shadow: 28px 28px 0 rgba(47,107,255,.13);
+}
+.phero .pwin::before { display: none; }
+
+/* Key value strip. */
+.vstrip {
+  gap: 0;
+  margin: 0;
+  border: 1px solid var(--ex-line);
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.vcell {
+  min-height: 230px;
+  padding: clamp(28px, 4vw, 54px);
+  border-right: 1px solid var(--ex-line);
+  background: transparent;
+}
+.vcell .vnum {
+  color: var(--ex-blue) !important;
+  font-size: clamp(54px, 6vw, 86px);
+  font-weight: 500;
+}
+.vcell .vlbl { margin-top: auto; color: var(--ex-ink); }
+.vcell .vsub { max-width: 34ch; color: var(--ex-faint); font-size: 13px; }
+
+/* Problem as a two-panel contrast, without cards. */
+.prob-grid {
+  gap: 0;
+  border-top: 1px solid var(--ex-line);
+  border-left: 1px solid var(--ex-line);
+}
+.prob {
+  min-height: 390px;
+  padding: clamp(34px, 5vw, 70px);
+  border: 0;
+  border-right: 1px solid var(--ex-line);
+  border-bottom: 1px solid var(--ex-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.prob .strike { display: none; }
+.prob .pnum { color: var(--ex-blue); }
+.prob h3 {
+  max-width: 16ch;
+  margin-top: 72px;
+  font-size: clamp(34px, 4vw, 58px);
+  font-weight: 500;
+  line-height: .98;
+  letter-spacing: -.05em;
+}
+.prob p { max-width: 54ch; color: var(--ex-faint); font-size: 14px; }
+
+/* Four steps become a chapter rail. */
+#how { background: var(--ex-ink) !important; color: #f5f7f2; border-color: rgba(255,255,255,.2) !important; }
+#how .section-head h2 { color: #f5f7f2; }
+#how .section-head p { color: rgba(245,247,242,.6); }
+.flow {
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid rgba(255,255,255,.2);
+}
+.flow-step {
+  min-height: 340px;
+  padding: 32px;
+  border: 0;
+  border-right: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.flow-step:hover { transform: none; background: rgba(255,255,255,.03); box-shadow: none; }
+.flow-step::after { display: none; }
+.flow-step .fn {
+  display: block;
+  width: auto;
+  height: auto;
+  color: #8eafff;
+  background: transparent;
+  box-shadow: none;
+}
+.flow-step h3 { margin-top: 94px; color: #f5f7f2; font-size: 30px; font-weight: 500; }
+.flow-step p { color: rgba(245,247,242,.58); font-size: 13px; }
+
+/* Feature rows inherit the main site's editorial service treatment. */
+#features .services-grid { border-color: var(--ex-line); }
+#features .svc {
+  grid-template-columns: minmax(230px,.72fr) minmax(300px,1fr);
+  min-height: 150px;
+}
+#features .svc h3 { grid-column: 1; }
+#features .svc p { grid-column: 2; }
+
+/* Insight examples: a news feed rather than stacked notification cards. */
+#beyond { background: #e8ecff !important; border-color: var(--ex-line) !important; }
+.beyond { grid-template-columns: .8fr 1.2fr; align-items: start; }
+.beyond h2 {
+  margin: 0 !important;
+  color: var(--ex-ink);
+  font-size: clamp(48px, 6vw, 88px) !important;
+  font-weight: 500 !important;
+  line-height: .93 !important;
+  letter-spacing: -.06em !important;
+}
+.beyond > div:first-child > p { margin-top: 28px !important; color: var(--ex-faint) !important; }
+.insight-stack { gap: 0; border-top: 1px solid var(--ex-line); }
+.icard {
+  min-height: 150px;
+  padding: 28px 0;
+  border: 0;
+  border-bottom: 1px solid var(--ex-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.icard .ic-chip {
+  padding: 0;
+  border: 0 !important;
+  border-radius: 0;
+  background: transparent !important;
+  color: var(--ex-blue) !important;
+}
+.icard p { max-width: 58ch; color: var(--ex-ink); font-size: 15px; }
+
+/* Licensing comparison. */
+.compare {
+  gap: 0;
+  border-top: 1px solid var(--ex-line);
+  border-left: 1px solid var(--ex-line);
+}
+.cpanel,
+.cpanel.muted,
+.cpanel.win {
+  min-height: 620px;
+  padding: clamp(32px, 4vw, 58px);
+  border: 0;
+  border-right: 1px solid var(--ex-line);
+  border-bottom: 1px solid var(--ex-line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.cpanel.win { background: var(--ex-blue); color: white; }
+.cpanel h3 { font-size: clamp(34px, 4vw, 56px); font-weight: 500; line-height: 1; }
+.cpanel.win .cp-cap,
+.cpanel.win .cp-model,
+.cpanel.win .cp-list li,
+.cpanel.win .cv-h,
+.cpanel.win .cost-bars .cb small { color: rgba(255,255,255,.68); }
+.cpanel.win .cp-list { border-color: rgba(255,255,255,.25); }
+.cost-bars .cb .bar,
+.cpanel.muted .cost-bars .cb .bar,
+.cpanel.win .cost-bars .cb .bar {
+  border-radius: 0;
+  background: var(--ex-ink);
+}
+.cpanel.win .cost-bars .cb .bar { background: white; }
+
+/* Closing invitation. */
+.pcta {
+  padding: clamp(110px, 15vw, 210px) 0;
+  background: var(--ex-blue);
+  border-color: var(--ex-line);
+}
+.pcta-bg { display: none; }
+.pcta .wrap { text-align: left; }
+.pcta h2 {
+  max-width: 10ch;
+  margin: 0;
+  color: white;
+  font-size: clamp(68px, 10vw, 148px);
+  font-weight: 500;
+  line-height: .84;
+  letter-spacing: -.072em;
+}
+.pcta p { max-width: 43ch; margin: 42px 0 0 auto; color: rgba(255,255,255,.7); font-size: 15px; }
+.pcta .hero-cta {
+  position: static;
+  justify-content: flex-end;
+  width: auto;
+  max-width: none;
+  margin-top: 34px;
+  flex-direction: row;
+  align-items: center;
+}
+.pcta .btn { width: auto; border-radius: 0; }
+.pcta .btn-primary { background: white; color: var(--ex-ink); box-shadow: none; }
+.pcta .btn-ghost { border-color: rgba(255,255,255,.45); background: transparent; color: white; }
+
+@media (max-width: 1080px) {
+  .phero h1 { max-width: 11ch; font-size: clamp(62px, 9vw, 96px); }
+  .phero .portal-visual { width: 58vw; right: 2vw; }
+  .phero .lead { width: 30vw; }
+  .flow { grid-template-columns: repeat(2,1fr); }
+  .beyond { grid-template-columns: 1fr; gap: 70px; }
+}
+
+@media (max-width: 720px) {
+  .nav .wordmark .product-tag { display: none; }
+
+  .phero {
+    min-height: 1120px;
+    padding-top: 70px;
+  }
+  .phero .wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 1050px;
+    padding-top: 74px;
+  }
+  .phero-copy { display: contents; }
+  .phero h1 {
+    position: static;
+    order: 1;
+    max-width: 9ch;
+    font-size: clamp(52px, 15vw, 72px);
+    line-height: .88;
+  }
+  .phero .lead {
+    position: static;
+    order: 2;
+    width: auto;
+    max-width: 34ch;
+    margin-top: 28px;
+  }
+  .phero .hero-cta {
+    position: static;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .phero .hero-cta .btn { width: 100%; justify-content: space-between; padding: 14px 0; }
+  .phero .portal-visual {
+    position: relative;
+    order: 4;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 48px;
+    overflow: hidden;
+    transform: none;
+  }
+  .phero .pwin {
+    width: 690px;
+    min-width: 690px;
+    transform: scale(.5);
+    transform-origin: top left;
+    margin-bottom: -190px;
+  }
+
+  .vstrip,
+  .prob-grid,
+  .flow,
+  .compare { grid-template-columns: 1fr; }
+  .vcell,
+  .prob,
+  .flow-step,
+  .cpanel,
+  .cpanel.muted,
+  .cpanel.win { min-height: 0; }
+  .prob h3,
+  .flow-step h3 { margin-top: 46px; }
+  #features .svc {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  #features .svc h3,
+  #features .svc p { grid-column: 1; }
+  .pcta { padding: 100px 0; }
+  .pcta h2 { font-size: clamp(58px, 16vw, 82px); }
+  .pcta p { margin-left: 0; }
+  .pcta .hero-cta { align-items: stretch; }
+  .pcta .btn { width: 100%; justify-content: center; }
+}

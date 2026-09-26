@@ -139,6 +139,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css?v=4" />
 <link rel="stylesheet" href="mobile.css?v=2" />
+<link rel="stylesheet" href="refinement.css?v=2" />
+<link rel="stylesheet" href="exhibition.css?v=2" />
 </head>
 <body>
 
@@ -187,12 +189,24 @@
   <div class="spotlight"></div>
 
   <div class="wrap">
+    <div class="hero-wordmark" aria-hidden="true">NORTH / VALUE</div>
+    <div class="hero-art" aria-hidden="true">
+      <canvas data-hero-sculpture></canvas>
+    </div>
+    <div class="hero-meta hero-fade">
+      <span>01 / NORVA</span>
+      <b data-i18n="hero.meta">Data → direction</b>
+    </div>
+    <aside class="hero-proof hero-fade">
+      <span data-i18n="hero.proof">Real outcome</span>
+      <strong>6h <i>→</i> 5min</strong>
+      <small data-i18n="hero.proof.note">financial routine automated</small>
+    </aside>
     <div class="hero-copy">
       <span class="eyebrow hero-fade" data-i18n="hero.eyebrow">Data clarity for growing businesses</span>
       <h1>
         <span class="line"><span data-i18n="hero.l1">Know where</span></span>
-        <span class="line"><span data-i18n="hero.l2">to grow</span></span>
-        <span class="line"><span class="gradient-text" data-i18n="hero.l3">next.</span></span>
+        <span class="line"><span data-i18n="hero.l2">to grow</span> <span data-i18n="hero.l3">next.</span></span>
       </h1>
       <p class="hero-sub hero-fade" data-i18n="hero.sub">Before you hire a data team or buy another platform, Norva gets inside your business to map the decisions, data, and next move that matter most.</p>
       <div class="hero-cta hero-fade">
@@ -658,9 +672,9 @@
   <div class="portal-bg"></div>
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow" data-i18n="portal.eyebrow">One way we deliver</span>
-      <h2 data-i18n="portal.title">A portal is a result — not the <span class="gradient-text">starting point.</span></h2>
-      <p data-i18n="portal.sub">When a single, governed view is the right answer, the Intelligence Portal brings reports and insights together. But it only comes after we understand the decision it must improve.</p>
+      <span class="eyebrow" data-i18n="portal.eyebrow">Norva's flagship product</span>
+      <h2 data-i18n="portal.title">Intelligence Portal. The whole company working from the <span class="gradient-text">same truth.</span></h2>
+      <p data-i18n="portal.sub">Our flagship data platform brings Power BI reports, written insights, alerts, and governance into one branded environment — without a paid viewer seat for every person.</p>
     </div>
 
     <div class="portal-stage">
@@ -1150,6 +1164,7 @@
   </div>
 </footer>
 
-<script src="app.js?v=4"></script>
+<script src="app.js?v=6"></script>
+<script src="hero-sculpture.js?v=1"></script>
 </body>
 </html>
