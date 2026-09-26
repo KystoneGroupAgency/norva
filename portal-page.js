@@ -20,7 +20,7 @@
 
     "pp.hero.eyebrow": "O produto da Norva",
     "pp.hero.h1": "Dashboards web. Criados por <span class=\"gradient-text\">agentes inteligentes.</span>",
-    "pp.hero.sub": "O Intelligence Portal transforma dados, perguntas e processos de negócio em dashboards web sob medida. Agentes especializados constroem a experiência, acompanham as métricas e explicam o que merece atenção — continuamente.",
+    "pp.hero.sub": "O Intelligence Portal conecta planilhas, bancos de dados, APIs e ambientes de BI para transformar perguntas e processos de negócio em dashboards web sob medida. Agentes especializados constroem a experiência, acompanham as métricas e explicam o que merece atenção — continuamente.",
     "pp.hero.cta1": "Solicitar uma demo",
     "pp.hero.cta2": "Ver como funciona",
     "pp.hero.visual.caption": "Norva Studio · a experiência real de criação dos dashboards",
@@ -68,9 +68,9 @@
 
     "pp.studio.eyebrow": "O produto real",
     "pp.studio.title": "Veja os agentes construindo um dashboard, etapa por etapa.",
-    "pp.studio.sub": "O Norva Studio transforma uma planilha e uma decisão de negócio em um dashboard web governado. Estas são telas reais do produto — não um mockup conceitual.",
-    "pp.studio.s1.t": "Envie os dados",
-    "pp.studio.s1.p": "Faça upload de um CSV ou Excel. Os agentes começam pela fonte, não por uma tela em branco.",
+    "pp.studio.sub": "O Norva Studio conecta planilhas, bancos de dados e APIs a uma decisão de negócio para criar um dashboard web governado. Estas são telas reais do produto — não um mockup conceitual.",
+    "pp.studio.s1.t": "Conecte a fonte de dados",
+    "pp.studio.s1.p": "Envie um CSV ou Excel, ou conecte um banco de dados ou API. Os agentes começam pela fonte, não por uma tela em branco.",
     "pp.studio.s2.t": "Entenda a estrutura",
     "pp.studio.s2.p": "O agente de dados identifica colunas, tipos, volume e as possibilidades analíticas do arquivo.",
     "pp.studio.s3.t": "Descreva a decisão",

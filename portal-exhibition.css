@@ -20,7 +20,7 @@ body { background: var(--ex-bg); }
 
 /* Product hero: oversized proposition with the product itself in the field. */
 .phero {
-  min-height: 100svh;
+  min-height: 0;
   padding: 82px 0 0;
   background: var(--ex-bg);
   border-bottom: 1px solid var(--ex-line);
@@ -30,17 +30,24 @@ body { background: var(--ex-bg); }
 .phero .wrap {
   position: relative;
   display: block;
-  min-height: calc(100svh - 82px);
+  min-height: 0;
+  padding-top: clamp(82px, 10vw, 142px);
+  padding-bottom: clamp(72px, 9vw, 126px);
   padding-inline: var(--gutter);
 }
-.phero-copy { position: static; max-width: none; }
+.phero-copy {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: 48px;
+  max-width: none;
+}
 .phero h1 {
-  position: absolute;
-  z-index: 4;
-  top: clamp(86px, 13vh, 132px);
-  left: var(--gutter);
-  right: var(--gutter);
-  max-width: 12.5ch;
+  position: static;
+  grid-column: 1 / -1;
+  max-width: 11ch;
   margin: 0;
   color: var(--ex-ink);
   font-size: clamp(66px, 8.3vw, 122px);
@@ -51,28 +58,23 @@ body { background: var(--ex-bg); }
 }
 .phero h1 .gradient-text { color: var(--ex-blue) !important; }
 .phero .lead {
-  position: absolute;
-  z-index: 5;
-  bottom: 68px;
-  left: var(--gutter);
-  width: min(370px, 31vw);
-  margin: 0;
+  position: static;
+  grid-column: 1;
+  width: min(430px, 42vw);
+  margin: 44px 0 0;
   color: var(--ex-faint);
   font-size: 13px;
   line-height: 1.6;
 }
 .phero .hero-cta {
-  position: absolute;
-  z-index: 6;
-  right: var(--gutter);
-  bottom: 58px;
-  left: auto;
+  position: static;
+  grid-column: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: auto;
   max-width: none;
-  margin: 0;
+  margin: 44px 0 0;
   gap: 18px;
 }
 .phero .hero-cta .btn {
@@ -88,13 +90,14 @@ body { background: var(--ex-bg); }
 }
 .phero .hero-cta .btn:hover { color: var(--ex-blue); background: transparent; transform: none; }
 .phero .portal-visual {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: 51%;
-  right: -2vw;
-  width: min(66vw, 1040px);
-  transform: translateY(-35%);
-  opacity: .94;
+  top: auto;
+  right: auto;
+  width: 100%;
+  margin-top: clamp(54px, 7vw, 92px);
+  transform: none;
+  opacity: 1;
 }
 .phero .pwin {
   border-radius: 0;
@@ -370,8 +373,8 @@ body { background: var(--ex-bg); }
 
 @media (max-width: 1080px) {
   .phero h1 { max-width: 11ch; font-size: clamp(62px, 9vw, 96px); }
-  .phero .portal-visual { width: 65vw; right: -2vw; }
-  .phero .lead { width: 30vw; }
+  .phero .portal-visual { width: 100%; right: auto; }
+  .phero .lead { width: min(430px, 48vw); }
   .flow { grid-template-columns: repeat(2,1fr); }
   .beyond { grid-template-columns: 1fr; gap: 70px; }
 }
@@ -380,33 +383,30 @@ body { background: var(--ex-bg); }
   .nav .wordmark .product-tag { display: none; }
 
   .phero {
-    min-height: 920px;
+    min-height: 0;
     padding-top: 70px;
   }
   .phero .wrap {
-    display: flex;
-    flex-direction: column;
-    min-height: 850px;
+    display: block;
+    min-height: 0;
     padding-top: 74px;
+    padding-bottom: 72px;
   }
-  .phero-copy { display: contents; }
+  .phero-copy { display: block; }
   .phero h1 {
     position: static;
-    order: 1;
     max-width: 9ch;
     font-size: clamp(52px, 15vw, 72px);
     line-height: .88;
   }
   .phero .lead {
     position: static;
-    order: 2;
     width: auto;
     max-width: 34ch;
     margin-top: 28px;
   }
   .phero .hero-cta {
     position: static;
-    order: 3;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -416,7 +416,6 @@ body { background: var(--ex-bg); }
   .phero .hero-cta .btn { width: 100%; justify-content: space-between; padding: 14px 0; }
   .phero .portal-visual {
     position: relative;
-    order: 4;
     top: auto;
     right: auto;
     width: 100%;

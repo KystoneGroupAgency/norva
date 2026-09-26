@@ -234,7 +234,7 @@
     "nav.portal": "Portal",
     "portal.eyebrow": "O produto principal da Norva",
     "portal.title": "Intelligence Portal. Dashboards web criados por <span class=\"gradient-text\">agentes inteligentes.</span>",
-    "portal.sub": "O produto principal da Norva transforma dados e perguntas de negócio em dashboards web sob medida. Agentes especializados constroem, analisam e mantêm cada experiência viva — com a sua marca, suas regras e suas fontes.",
+    "portal.sub": "O produto principal da Norva conecta planilhas, bancos de dados, APIs e ambientes de BI para transformar perguntas de negócio em dashboards web sob medida. Agentes especializados constroem, analisam e mantêm cada experiência viva.",
     "portal.f1.t": "Dashboards web sob medida",
     "portal.f1.p": "Experiências rápidas, responsivas e feitas para cada decisão — sem ficar preso ao formato de uma ferramenta de BI.",
     "portal.f2.t": "Agentes que constroem e analisam",
