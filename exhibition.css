@@ -58,6 +58,11 @@ body {
   height: 27px;
   filter: none;
 }
+.brand .brand-mark {
+  object-fit: contain;
+  transform: scale(1.65);
+  transform-origin: center;
+}
 .brand .wordmark.norva {
   color: var(--ex-ink);
   font-size: 20px;
