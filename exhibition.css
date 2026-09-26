@@ -553,6 +553,25 @@ body {
   border-radius: 0;
   box-shadow: 38px 38px 0 var(--ex-blue);
 }
+.portal .real-product-shot {
+  position: relative;
+  margin-bottom: 46px;
+}
+.portal .real-product-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(245,247,242,.28);
+  box-shadow: 38px 38px 0 var(--ex-blue);
+}
+.portal .real-product-shot figcaption {
+  margin-top: 20px;
+  color: rgba(245,247,242,.54);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
 .psave { border-radius: 0; }
 
 /* Journey and engagement: timelines made of lines rather than tiles. */
@@ -813,6 +832,11 @@ body {
     margin-top: 56px;
     overflow: hidden;
   }
+  .portal .real-product-shot {
+    overflow: visible;
+    margin-bottom: 24px;
+  }
+  .portal .real-product-shot img { box-shadow: 16px 16px 0 var(--ex-blue); }
   .portal .pwin { box-shadow: 18px 18px 0 var(--ex-blue); }
   .pwin { min-width: 690px; transform: scale(.62); transform-origin: top left; margin-bottom: -210px; }
   .psave { display: none; }

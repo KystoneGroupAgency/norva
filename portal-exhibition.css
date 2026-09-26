@@ -91,8 +91,8 @@ body { background: var(--ex-bg); }
   position: absolute;
   z-index: 2;
   top: 51%;
-  right: 6vw;
-  width: min(54vw, 760px);
+  right: -2vw;
+  width: min(66vw, 1040px);
   transform: translateY(-35%);
   opacity: .94;
 }
@@ -102,6 +102,25 @@ body { background: var(--ex-bg); }
   box-shadow: 28px 28px 0 rgba(47,107,255,.13);
 }
 .phero .pwin::before { display: none; }
+.phero .product-screenshot {
+  margin: 0;
+}
+.phero .product-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ex-line);
+  box-shadow: 28px 28px 0 rgba(47,107,255,.14);
+}
+.phero .product-screenshot figcaption {
+  margin-top: 14px;
+  color: var(--ex-faint);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-align: right;
+  text-transform: uppercase;
+}
 
 /* Key value strip. */
 .vstrip {
@@ -186,6 +205,63 @@ body { background: var(--ex-bg); }
 }
 .flow-step h3 { margin-top: 94px; color: #f5f7f2; font-size: 30px; font-weight: 500; }
 .flow-step p { color: rgba(245,247,242,.58); font-size: 13px; }
+
+/* Real product tour: the actual interface is the visual proof. */
+.studio-tour {
+  overflow: hidden;
+  background: #e8ecff;
+  border-bottom: 1px solid var(--ex-line);
+}
+.studio-tour .section-head h2 { max-width: 13ch; }
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(56px, 8vw, 110px);
+  padding: 1px;
+  background: var(--ex-line);
+}
+.studio-shot {
+  min-width: 0;
+  margin: 0;
+  background: var(--ex-bg);
+}
+.studio-shot-wide { grid-column: 1 / -1; }
+.studio-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.985 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+.studio-shot figcaption {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  min-height: 138px;
+  padding: 24px;
+  border-top: 1px solid var(--ex-line);
+}
+.studio-shot figcaption > span {
+  color: var(--ex-blue);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.studio-shot figcaption div { display: flex; flex-direction: column; gap: 8px; }
+.studio-shot figcaption b {
+  color: var(--ex-ink);
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+.studio-shot figcaption small {
+  max-width: 58ch;
+  color: var(--ex-faint);
+  font-size: 13px;
+  line-height: 1.55;
+}
 
 /* Feature rows inherit the main site's editorial service treatment. */
 #features .services-grid { border-color: var(--ex-line); }
@@ -294,7 +370,7 @@ body { background: var(--ex-bg); }
 
 @media (max-width: 1080px) {
   .phero h1 { max-width: 11ch; font-size: clamp(62px, 9vw, 96px); }
-  .phero .portal-visual { width: 58vw; right: 2vw; }
+  .phero .portal-visual { width: 65vw; right: -2vw; }
   .phero .lead { width: 30vw; }
   .flow { grid-template-columns: repeat(2,1fr); }
   .beyond { grid-template-columns: 1fr; gap: 70px; }
@@ -304,13 +380,13 @@ body { background: var(--ex-bg); }
   .nav .wordmark .product-tag { display: none; }
 
   .phero {
-    min-height: 1120px;
+    min-height: 920px;
     padding-top: 70px;
   }
   .phero .wrap {
     display: flex;
     flex-direction: column;
-    min-height: 1050px;
+    min-height: 850px;
     padding-top: 74px;
   }
   .phero-copy { display: contents; }
@@ -348,6 +424,8 @@ body { background: var(--ex-bg); }
     overflow: hidden;
     transform: none;
   }
+  .phero .product-screenshot { overflow: visible; }
+  .phero .product-screenshot img { box-shadow: 16px 16px 0 rgba(47,107,255,.14); }
   .phero .pwin {
     width: 690px;
     min-width: 690px;
@@ -359,7 +437,10 @@ body { background: var(--ex-bg); }
   .vstrip,
   .prob-grid,
   .flow,
-  .compare { grid-template-columns: 1fr; }
+  .compare,
+  .studio-gallery { grid-template-columns: 1fr; }
+  .studio-shot-wide { grid-column: auto; }
+  .studio-shot figcaption { min-height: 0; }
   .vcell,
   .prob,
   .flow-step,

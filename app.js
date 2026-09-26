@@ -262,6 +262,7 @@
     "portal.save.before": "Criação",
     "portal.save.after": "Análise",
     "portal.save.note": "Operando ao vivo",
+    "portal.shot.caption": "O Intelligence Portal real · dashboards, estudos, requisições e agentes no mesmo ambiente",
 
     "eng.eyebrow": "Modelos de atuação",
     "eng.title": "Assumimos tudo, ou reforçamos o time que você já tem.",

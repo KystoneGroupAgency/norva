@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="mobile.css?v=2" />
 <link rel="stylesheet" href="refinement.css?v=2" />
 <link rel="stylesheet" href="exhibition.css?v=3" />
-<link rel="stylesheet" href="portal-exhibition.css?v=2" />
+<link rel="stylesheet" href="portal-exhibition.css?v=3" />
 </head>
 <body>
 
@@ -31,6 +31,7 @@
   <div class="nav-links" id="navLinks">
     <a href="#overview" data-i18n="pp.nav.overview">Overview</a>
     <a href="#how" data-i18n="pp.nav.how">How it works</a>
+    <a href="#studio" data-i18n="pp.nav.studio">Studio</a>
     <a href="#features" data-i18n="pp.nav.features">Features</a>
     <a href="#licensing" data-i18n="pp.nav.licensing">Living product</a>
   </div>
@@ -67,55 +68,10 @@
       </div>
     </div>
 
-    <!-- product window -->
-    <div class="portal-visual reveal" data-delay="2">
-      <div class="pwin">
-        <div class="pwin-bar">
-          <span class="pdots"><i></i><i></i><i></i></span>
-          <span class="purl" data-i18n="pp.url">portal.yourcompany.com</span>
-          <span class="pwin-brand">NORVA</span>
-        </div>
-        <div class="pwin-body">
-          <aside class="pside">
-            <div class="pside-h" data-i18n="pp.nav.reports">Reports</div>
-            <a class="pitem"><span class="pdotmark"></span><span data-i18n="pp.r.sales">Sales</span></a>
-            <a class="pitem on"><span class="pdotmark"></span><span data-i18n="pp.r.finance">Finance</span></a>
-            <a class="pitem"><span class="pdotmark"></span><span data-i18n="pp.r.ops">Operations</span></a>
-            <a class="pitem"><span class="pdotmark"></span><span data-i18n="pp.r.mkt">Marketing</span></a>
-            <div class="pside-h" data-i18n="pp.r.intel">Intelligence</div>
-            <a class="pitem"><span class="pdotmark alt"></span><span data-i18n="pp.r.alerts">Alerts</span></a>
-          </aside>
-          <div class="pmain">
-            <div class="pmain-head">
-              <b data-i18n="pp.report.title">Finance · Overview</b>
-              <span class="ptag"><span class="pulse"></span><span data-i18n="pp.agent.live">Agents live</span></span>
-            </div>
-            <div class="pkpis">
-              <div class="pkpi"><span class="pk-l" data-i18n="pp.k1">Cash</span><span class="pk-v">$8.7<i>M</i></span></div>
-              <div class="pkpi"><span class="pk-l" data-i18n="pp.k2">Burn</span><span class="pk-v">$640<i>k</i></span></div>
-              <div class="pkpi"><span class="pk-l" data-i18n="pp.k3">Runway</span><span class="pk-v">14<i>mo</i></span></div>
-            </div>
-            <div class="pchart">
-              <div class="pbar" style="--h:52%"></div>
-              <div class="pbar" style="--h:64%"></div>
-              <div class="pbar" style="--h:58%"></div>
-              <div class="pbar" style="--h:73%"></div>
-              <div class="pbar hi" style="--h:84%"></div>
-              <div class="pbar" style="--h:69%"></div>
-              <div class="pbar hi" style="--h:90%"></div>
-              <div class="pbar" style="--h:76%"></div>
-            </div>
-            <div class="pinsight">
-              <div class="pinsight-h">
-                <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5l1.3 3.7L13 6.5l-3 2 .9 4-2.9-2.2L5.1 12.5 6 8.5l-3-2 3.7-1.3L8 1.5z" fill="currentColor"/></svg>
-                <span data-i18n="pp.insight.h">Analysis agent</span>
-              </div>
-              <p data-i18n="pp.insight.p">Burn rose <b>9% vs last month</b>, driven by cloud spend. At this pace runway shortens by ~2 months — flagged to Finance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <figure class="portal-visual product-screenshot reveal" data-delay="2">
+      <img src="assets/portal/studio-home.jpg" alt="Norva Studio creating a web dashboard from a spreadsheet" width="2000" height="1011" fetchpriority="high" />
+      <figcaption data-i18n="pp.hero.visual.caption">Norva Studio · the real dashboard creation experience</figcaption>
+    </figure>
   </div>
 </header>
 
@@ -196,6 +152,49 @@
         <h3 data-i18n="pp.how4.t">Govern</h3>
         <p data-i18n="pp.how4.p">Row-level security, SSO, and a report catalog control who sees what — down to the row.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REAL PRODUCT TOUR ============================ -->
+<section class="section studio-tour" id="studio">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="pp.studio.eyebrow">The real product</span>
+      <h2 data-i18n="pp.studio.title">Watch the agents build a dashboard, step by step.</h2>
+      <p data-i18n="pp.studio.sub">Norva Studio turns a spreadsheet and a business decision into a governed web dashboard. This is the actual product — not a concept render.</p>
+    </div>
+
+    <div class="studio-gallery">
+      <figure class="studio-shot studio-shot-wide reveal">
+        <img src="assets/portal/studio-upload.jpg" alt="Uploading a spreadsheet in Norva Studio" width="2000" height="1006" loading="lazy" decoding="async" />
+        <figcaption><span>01</span><div><b data-i18n="pp.studio.s1.t">Send the data</b><small data-i18n="pp.studio.s1.p">Upload a CSV or Excel file. The agents begin with the source, not with a blank canvas.</small></div></figcaption>
+      </figure>
+
+      <figure class="studio-shot reveal">
+        <img src="assets/portal/studio-data-read.jpg" alt="Norva Studio reading and understanding spreadsheet columns" width="2000" height="1004" loading="lazy" decoding="async" />
+        <figcaption><span>02</span><div><b data-i18n="pp.studio.s2.t">Understand the structure</b><small data-i18n="pp.studio.s2.p">The data agent identifies columns, types, volume, and the analytical possibilities in the file.</small></div></figcaption>
+      </figure>
+
+      <figure class="studio-shot reveal">
+        <img src="assets/portal/studio-objective.jpg" alt="Defining the business decision for the dashboard" width="2000" height="1009" loading="lazy" decoding="async" />
+        <figcaption><span>03</span><div><b data-i18n="pp.studio.s3.t">Describe the decision</b><small data-i18n="pp.studio.s3.p">Tell the agents what the dashboard must help decide. The product suggests useful questions from the data.</small></div></figcaption>
+      </figure>
+
+      <figure class="studio-shot reveal">
+        <img src="assets/portal/studio-visuals.jpg" alt="Selecting dashboard charts suggested by Norva Studio" width="2000" height="1001" loading="lazy" decoding="async" />
+        <figcaption><span>04</span><div><b data-i18n="pp.studio.s4.t">Shape the visual language</b><small data-i18n="pp.studio.s4.p">Choose the views that matter. The interface agent assembles hierarchy, charts, and detail.</small></div></figcaption>
+      </figure>
+
+      <figure class="studio-shot reveal">
+        <img src="assets/portal/studio-privacy.jpg" alt="Choosing which data the AI can access in Norva Studio" width="2000" height="1001" loading="lazy" decoding="async" />
+        <figcaption><span>05</span><div><b data-i18n="pp.studio.s5.t">Protect sensitive fields</b><small data-i18n="pp.studio.s5.p">Choose what the AI can see. Personal or confidential columns can remain protected by design.</small></div></figcaption>
+      </figure>
+
+      <figure class="studio-shot studio-shot-wide reveal">
+        <img src="assets/portal/portal-home.jpg" alt="Published web dashboards inside the Norva Intelligence Portal" width="2000" height="1003" loading="lazy" decoding="async" />
+        <figcaption><span>06</span><div><b data-i18n="pp.studio.s6.t">Publish inside the Portal</b><small data-i18n="pp.studio.s6.p">The finished dashboard becomes part of a governed workspace alongside studies, agents, and requests.</small></div></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -350,6 +349,7 @@
           <h5 data-i18n="pp.foot.c1">Product</h5>
           <a href="#overview" data-i18n="pp.nav.overview">Overview</a>
           <a href="#how" data-i18n="pp.nav.how">How it works</a>
+          <a href="#studio" data-i18n="pp.nav.studio">Studio</a>
           <a href="#features" data-i18n="pp.nav.features">Features</a>
           <a href="#licensing" data-i18n="pp.nav.licensing">Living product</a>
         </div>
@@ -375,6 +375,6 @@
   </div>
 </footer>
 
-<script src="portal-page.js?v=3"></script>
+<script src="portal-page.js?v=4"></script>
 </body>
 </html>
