@@ -1,1 +1,3 @@
 dist/
+tools/out/
+__pycache__/
