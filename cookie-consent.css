@@ -1,0 +1,91 @@
+/* ============================================================
+   NORVA — Cookie consent banner (see cookie-consent.js)
+   Uses the existing design tokens from styles.css.
+   ============================================================ */
+.ncc {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: min(920px, calc(100% - 32px));
+  transform: translate(-50%, 16px);
+  opacity: 0;
+  background: var(--surface, #fff);
+  color: var(--text, #0e1422);
+  border: 1px solid var(--line-strong, rgba(18, 28, 54, 0.17));
+  border-radius: 18px;
+  box-shadow: var(--shadow, 0 30px 80px -36px rgba(30, 50, 110, 0.30));
+  font-family: var(--body, "Manrope", sans-serif);
+  transition: opacity 0.45s var(--ease, ease), transform 0.45s var(--ease, ease);
+}
+.ncc[hidden] { display: none; }
+.ncc.is-in { opacity: 1; transform: translate(-50%, 0); }
+
+.ncc-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 24px;
+}
+.ncc-copy { flex: 1; min-width: 0; }
+.ncc-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin: 0 0 6px;
+  font-family: var(--mono, "Space Mono", monospace);
+  font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent, #2f6bff);
+}
+.ncc-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent, #2f6bff); }
+.ncc-title {
+  margin: 0 0 6px;
+  font-family: var(--display, "Space Grotesk", sans-serif);
+  font-size: 18px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2;
+  color: var(--text, #0e1422);
+}
+.ncc-body {
+  margin: 0;
+  font-size: 13.5px; line-height: 1.55;
+  color: var(--text-dim, #4d5772);
+}
+
+.ncc-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.ncc-btn {
+  appearance: none;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 100px;
+  font-family: var(--display, "Space Grotesk", sans-serif);
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.ncc-btn-primary { background: var(--accent, #2f6bff); color: #fff; border: 1px solid var(--accent, #2f6bff); }
+.ncc-btn-primary:hover { background: var(--accent-bright, #1f5cf5); border-color: var(--accent-bright, #1f5cf5); }
+.ncc-btn-ghost { background: transparent; color: var(--text, #0e1422); border: 1px solid var(--line-strong, rgba(18, 28, 54, 0.17)); }
+.ncc-btn-ghost:hover { border-color: var(--text, #0e1422); }
+.ncc-btn:focus-visible,
+.ncc-prefs:focus-visible {
+  outline: 2px solid var(--accent, #2f6bff);
+  outline-offset: 3px;
+}
+
+/* Footer link to change the choice later */
+.ncc-prefs {
+  appearance: none; background: none; border: 0; padding: 0;
+  font: inherit; color: inherit; letter-spacing: inherit;
+  text-decoration: underline; text-underline-offset: 3px;
+  cursor: pointer;
+}
+.ncc-prefs:hover { color: var(--accent, #2f6bff); }
+
+@media (max-width: 720px) {
+  .ncc { bottom: max(12px, env(safe-area-inset-bottom)); width: calc(100% - 24px); border-radius: 16px; }
+  .ncc-inner { flex-direction: column; align-items: stretch; gap: 16px; padding: 18px; }
+  .ncc-actions { width: 100%; }
+  .ncc-btn { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ncc, .ncc-btn { transition: none; }
+  .ncc { transform: translate(-50%, 0); }
+}
