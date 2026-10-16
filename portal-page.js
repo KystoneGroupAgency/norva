@@ -5,7 +5,7 @@
   "use strict";
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- i18n (EN inline; PT here) ---------- */
+  /* ---------- i18n (PT inline in HTML; PT and EN here) ---------- */
   var PT = {
     "pp.tag": "Portal de Inteligência",
     "pp.nav.overview": "Visão geral",
@@ -146,16 +146,130 @@
     "pp.foot.crafted": "Construído com dados, não palpites."
   };
 
+  var EN = {
+    "pp.tag": "Intelligence Portal",
+    "pp.nav.overview": "Overview",
+    "pp.nav.how": "How it works",
+    "pp.nav.studio": "Studio",
+    "pp.nav.features": "Features",
+    "pp.nav.licensing": "Living product",
+    "pp.nav.back": "Back to site",
+    "pp.nav.cta": "Request a demo",
+    "pp.hero.eyebrow": "The Norva product",
+    "pp.hero.h1": "Web dashboards. Built by <span class=\"gradient-text\">intelligent agents.</span>",
+    "pp.hero.sub": "Intelligence Portal connects spreadsheets, databases, APIs, and BI environments to turn business questions and processes into custom web dashboards. Specialized agents build the experience, monitor the metrics, and explain what deserves attention — continuously.",
+    "pp.hero.cta1": "Request a demo",
+    "pp.hero.cta2": "See how it works",
+    "pp.hero.visual.caption": "Norva Studio · the real dashboard creation experience",
+    "pp.v1.l": "Specialized agents",
+    "pp.v1.s": "Data, design, and analysis agents work together to create each dashboard.",
+    "pp.v2.l": "Web, not a rigid canvas",
+    "pp.v2.s": "Every experience is responsive, interactive, and designed for the decision at hand.",
+    "pp.v3.l": "Alive by design",
+    "pp.v3.s": "The product monitors, explains, and evolves as your data and business change.",
+    "pp.prob.eyebrow": "The problem",
+    "pp.prob.title": "Traditional dashboards launch late and age fast.",
+    "pp.prob.sub": "Between a business question and a useful answer sits a queue of specification, development, and maintenance. Intelligence Portal shortens that cycle with agents.",
+    "pp.prob1.t": "Every new question becomes a project",
+    "pp.prob1.p": "A simple change often depends on a brief, a backlog, and several rounds between business, data, and design. By delivery, the decision has already moved.",
+    "pp.prob2.t": "The dashboard stops at the chart",
+    "pp.prob2.p": "Even when the visualization is correct, someone still needs to interpret what changed, investigate the cause, and decide what happens next.",
+    "pp.how.eyebrow": "How it works",
+    "pp.how.title": "From question to web dashboard — with agents at every step.",
+    "pp.how.sub": "The portal connects to your sources and coordinates specialized agents to turn data into a production-ready experience.",
+    "pp.how1.t": "Connect the data",
+    "pp.how1.p": "We integrate databases, APIs, spreadsheets, and tools such as Power BI into one governed context.",
+    "pp.how2.t": "Build with agents",
+    "pp.how2.p": "Data, analysis, and interface agents create the right web dashboard for each question and audience.",
+    "pp.how3.t": "Analyze continuously",
+    "pp.how3.p": "Agents monitor metrics, explain changes, detect anomalies, and recommend what happens next.",
+    "pp.how4.t": "Govern",
+    "pp.how4.p": "Row-level security, SSO, and a report catalog control who sees what — down to the row.",
+    "pp.studio.eyebrow": "The real product",
+    "pp.studio.title": "Watch the agents build a dashboard, step by step.",
+    "pp.studio.sub": "Norva Studio connects spreadsheets, databases, and APIs to a business decision and creates a governed web dashboard. This is the actual product — not a concept render.",
+    "pp.studio.s1.t": "Connect the data source",
+    "pp.studio.s1.p": "Upload CSV or Excel, or connect a database or API. The agents begin with the source, not with a blank canvas.",
+    "pp.studio.s2.t": "Understand the structure",
+    "pp.studio.s2.p": "The data agent identifies columns, types, volume, and the analytical possibilities in the file.",
+    "pp.studio.s3.t": "Describe the decision",
+    "pp.studio.s3.p": "Tell the agents what the dashboard must help decide. The product suggests useful questions from the data.",
+    "pp.studio.s4.t": "Shape the visual language",
+    "pp.studio.s4.p": "Choose the views that matter. The interface agent assembles hierarchy, charts, and detail.",
+    "pp.studio.s5.t": "Protect sensitive fields",
+    "pp.studio.s5.p": "Choose what the AI can see. Personal or confidential columns can remain protected by design.",
+    "pp.studio.s6.t": "Publish inside the Portal",
+    "pp.studio.s6.p": "The finished dashboard becomes part of a governed workspace alongside studies, agents, and requests.",
+    "pp.feat.eyebrow": "What's inside",
+    "pp.feat.title": "A data product factory, inside your portal.",
+    "pp.f1.t": "Custom web dashboards",
+    "pp.f1.p": "Responsive, interactive interfaces designed for each decision flow — on desktop or mobile.",
+    "pp.f2.t": "Agent orchestration",
+    "pp.f2.p": "Specialized agents collaborate to model data, create visualizations, investigate changes, and write answers.",
+    "pp.f3.t": "Alerts &amp; anomalies",
+    "pp.f3.p": "The portal watches your metrics and flags what breaks pattern — pushed to the right people automatically.",
+    "pp.f4.t": "White-label experience",
+    "pp.f4.p": "Your logo, your colors, your domain. To everyone who logs in, it's simply your company's data product.",
+    "pp.f5.t": "Security &amp; SSO",
+    "pp.f5.p": "Row-level security, single sign-on, and granular roles so each person sees exactly the data they should.",
+    "pp.f6.t": "Open integrations",
+    "pp.f6.p": "Connect databases, APIs, spreadsheets, and Power BI without limiting the product to one tool or source.",
+    "pp.beyond.eyebrow": "Agents at work",
+    "pp.beyond.title": "They do not stop when the dashboard is ready.",
+    "pp.beyond.sub": "After building the experience, the agents keep working: monitoring metrics, investigating deviations, and delivering trends, anomalies, and next steps in plain language.",
+    "pp.ic1.tag": "Trend up",
+    "pp.ic1.time": "Sales · today",
+    "pp.ic1.p": "Revenue is <b>12% above target</b> for the quarter, led by the Enterprise segment. The South region is the only soft spot — two accounts to watch.",
+    "pp.ic2.tag": "Anomaly",
+    "pp.ic2.time": "Finance · 2h ago",
+    "pp.ic2.p": "Cloud spend jumped <b>9% vs last month</b> — outside the normal range. At this pace, runway shortens by roughly 2 months.",
+    "pp.ic3.tag": "Forecast",
+    "pp.ic3.time": "Operations · today",
+    "pp.ic3.p": "On-time delivery is trending toward <b>96% next month</b> if current capacity holds. One distribution center is the bottleneck.",
+    "pp.lic.eyebrow": "Living product",
+    "pp.lic.title": "Stop treating every dashboard as a project that ends.",
+    "pp.lic.sub": "The agent-powered model shortens the cycle between a new question and a production answer — and keeps the product evolving after launch.",
+    "pp.lic.a.cap": "Traditional dashboard",
+    "pp.lic.a.t": "Static project",
+    "pp.lic.a.m": "Every adjustment returns to the specification, development, and publishing queue.",
+    "pp.lic.cv": "Effort as the product evolves",
+    "pp.lic.a.f1": "The backlog grows with every new question",
+    "pp.lic.a.f2": "Business context gets lost between teams",
+    "pp.lic.a.f3": "Maintenance depends on the technical team",
+    "pp.lic.b.cap": "With Intelligence Portal",
+    "pp.lic.b.t": "Agent-powered product",
+    "pp.lic.b.m": "Agents share context and accelerate creation, analysis, and continuous evolution.",
+    "pp.lic.b.f1": "New questions become experiences quickly",
+    "pp.lic.b.f2": "Business context stays inside the product",
+    "pp.lic.b.f3": "Governance and access remain centralized",
+    "pp.lic.note": "Every implementation is designed around your company's context, sources, and access rules.",
+    "pp.cta.eyebrow": "Let's build",
+    "pp.cta.title": "Give the agents a question. Watch the dashboard take shape.",
+    "pp.cta.sub": "Bring an important decision and one data source. We will show how Intelligence Portal turns that context into an intelligent web experience.",
+    "pp.cta.btn": "Request a demo",
+    "pp.cta.btn2": "Explore our services",
+    "pp.foot.tagline": "Intelligence Portal — web dashboards built by intelligent agents.",
+    "pp.foot.c1": "Product",
+    "pp.foot.c2": "Norva",
+    "pp.foot.services": "Services",
+    "pp.foot.approach": "Approach",
+    "pp.foot.about": "About",
+    "pp.foot.contact": "Contact",
+    "pp.foot.c3": "Connect",
+    "pp.foot.rights": "© 2026 Norva — a Kystone Group company. All rights reserved.",
+    "pp.foot.crafted": "Built on data, not guesses."
+  };
+
   var nodes = document.querySelectorAll("[data-i18n]");
-  var originalEN = {};
-  nodes.forEach(function (n) { originalEN[n.getAttribute("data-i18n")] = n.innerHTML; });
+  var originalHTML = {};
+  nodes.forEach(function (n) { originalHTML[n.getAttribute("data-i18n")] = n.innerHTML; });
 
   function setLang(lang) {
     var isPT = lang === "pt";
     document.documentElement.lang = isPT ? "pt-BR" : "en";
     nodes.forEach(function (n) {
       var k = n.getAttribute("data-i18n");
-      n.innerHTML = isPT ? (PT[k] != null ? PT[k] : originalEN[k]) : originalEN[k];
+      n.innerHTML = isPT ? (PT[k] != null ? PT[k] : originalHTML[k]) : (EN[k] != null ? EN[k] : originalHTML[k]);
     });
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.classList.toggle("active", b.dataset.lang === lang);
