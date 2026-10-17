@@ -1,3 +1,6 @@
+/* camada: base (mesma camada de styles.css, para manter a especificidade entre arquivos). Ordem em tokens.css. */
+@layer base {
+
 /* ============================================================
    NORVA — MOBILE OPTIMIZATION LAYER
    ------------------------------------------------------------
@@ -231,3 +234,5 @@ body.menu-lock { overflow: hidden; }
   .purl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .pwin-brand { display: none; }
 }
+
+} /* fim @layer base */

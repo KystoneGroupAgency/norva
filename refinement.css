@@ -1,3 +1,6 @@
+/* camada: base (mesma camada de styles.css, para manter a especificidade entre arquivos). Ordem em tokens.css. */
+@layer base {
+
 /* Focused visual refinement: keep the Norva system, remove generic AI patterns. */
 
 /* No gradient typography anywhere on the landing page. */
@@ -415,3 +418,5 @@
   .hero-wordmark { top: 62%; font-size: 24vw; }
   .hero-cta .btn { width: 100%; }
 }
+
+} /* fim @layer base */

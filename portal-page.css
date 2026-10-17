@@ -1,3 +1,6 @@
+/* camada: base (mesma camada de styles.css, para manter a especificidade entre arquivos). Ordem em tokens.css. */
+@layer base {
+
 /* ============================================================
    INTELLIGENCE PORTAL — dedicated product page
    Builds on styles.css tokens & components
@@ -146,3 +149,5 @@
   .vstrip, .prob-grid, .compare, .flow { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
+
+} /* fim @layer base */

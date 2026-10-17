@@ -1,3 +1,6 @@
+/* camada: base (mesma camada de styles.css, para manter a especificidade entre arquivos). Ordem em tokens.css. */
+@layer base {
+
 /*
  * NORVA / EDITORIAL EXHIBITION
  * A restrained, typographic experience inspired by digital exhibitions.
@@ -842,3 +845,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-art { animation: none; }
 }
+
+} /* fim @layer base */

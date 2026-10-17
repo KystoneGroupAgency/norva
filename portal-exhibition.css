@@ -1,3 +1,6 @@
+/* camada: base (mesma camada de styles.css, para manter a especificidade entre arquivos). Ordem em tokens.css. */
+@layer base {
+
 /* Norva Intelligence Portal — editorial product exhibition. */
 
 body { background: var(--ex-bg); }
@@ -460,3 +463,5 @@ body { background: var(--ex-bg); }
   .pcta .hero-cta { align-items: stretch; }
   .pcta .btn { width: 100%; justify-content: center; }
 }
+
+} /* fim @layer base */

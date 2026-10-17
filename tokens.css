@@ -5,6 +5,19 @@
    eram aplicados (os de exhibition.css venciam), sem mudança visual.
    ============================================================ */
 
+/* Ordem da cascata (CSS nativo, sem build):
+   reset < tokens < base < components < sections < pages < overrides.
+   - base: os seis CSS atuais, na mesma camada e na mesma ordem de carga,
+     para que a especificidade entre eles continue decidindo como hoje.
+   - components, sections, pages: reservadas para as próximas fases.
+   - overrides: só o que precisa vencer de propósito (ex-inline e
+     ex-!important). Por estar numa camada posterior, vence base sem
+     !important e sem depender de especificidade.
+   cookie-consent.css fica fora das camadas (frente separada). */
+@layer reset, tokens, base, components, sections, pages, overrides;
+
+@layer tokens {
+
 :root {
   /* base */
   --bg: #f6f7fb;
@@ -60,3 +73,5 @@
 @media (max-width: 720px) {
   :root { --gutter: clamp(18px, 5vw, 28px); }
 }
+
+} /* fim @layer tokens */
