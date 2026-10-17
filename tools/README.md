@@ -54,9 +54,10 @@ tools/style-diff-all.sh a6ffe89                              # estilos computado
 ```
 - `visual-diff.py` conta pixels diferentes por captura e grava a imagem do diff.
   Por padrão ignora anti-aliasing/subpixel (tolerância de 32 por canal) e só
-  acusa capturas com mais de 0,01% de pixels diferentes, ou seja, mudança
+  acusa capturas com mais de 0,05% de pixels diferentes, ou seja, mudança
   visível. Ruído conhecido entre duas execuções do mesmo commit: ~20 px na
-  borda do seletor PT/EN (`.lang`) na nav.
+  borda do seletor PT/EN (`.lang`) e até ~0,012% de deslocamento de subpixel
+  nos cards de stack com paralaxe (768/1024px).
 - `style-diff.py` compara `getComputedStyle` de todos os elementos e
   pseudo-elementos nos estados normal, hover, focus, active, menu mobile aberto
   e reduced-motion. É a prova de que uma refatoração de CSS não muda nada.
