@@ -881,3 +881,46 @@ body::after {
 }
 
 } /* fim @layer base */
+
+
+/* ============================================================
+   Ex-estilos inline (index.html e portal.html)
+   Camada "overrides": vence "base" como o atributo style vencia, e
+   continua perdendo para !important, como antes. :where() zera a
+   especificidade para que overrides vindos dos outros arquivos
+   (ex-!important) continuem vencendo estes valores, como antes.
+   Valores copiados literalmente do atributo style.
+   ============================================================ */
+@layer overrides {
+  /* index: painel do hero (escondido por CSS) */
+  :where(.legend-s1) { background: #2f6bff; }
+  :where(.legend-s2) { background: #07b39b; }
+  :where(.bar-row--last) { margin-bottom: 0; }
+  :where(.gauge-canvas) { width: 100%; height: 96px; }
+  /* index: #approach */
+  :where(.approach-title) { font-family: var(--display); font-weight: 600; font-size: clamp(30px,4vw,52px); line-height: 1.04; letter-spacing: -0.03em; margin: 22px 0 18px; }
+  :where(.approach-sub) { color: var(--text-dim); max-width: 42ch; text-wrap: pretty; }
+  /* index: #impact (unidades "h" e "min") */
+  :where(.unit-sm) { font-size: 0.5em; }
+  /* index: cabeçalhos de seção (#team, #faq) */
+  :where(.section-head--flush) { margin-bottom: 0; }
+  :where(.section-head--center) { margin-inline: auto; text-align: center; }
+  :where(.eyebrow--center) { justify-content: center; }
+  /* index: #about e #contact */
+  :where(.about-statement--spaced) { margin-top: 24px; }
+  :where(.about-copy) { color: var(--text-dim); margin-top: 26px; max-width: 50ch; text-wrap: pretty; }
+  :where(.contact-title) { margin-top: 22px; }
+  /* index e portal: rodapé */
+  :where(.footer-brand-col) { max-width: 300px; }
+  :where(.footer-brand) { margin-bottom: 18px; }
+  :where(.footer-tagline) { color: var(--text-dim); font-size: 14px; margin-top: 8px; }
+  /* portal: marca da nav, intro, #how, #beyond e CTA */
+  :where(.brand-word) { letter-spacing: -0.03em; }
+  :where(.brand-accent) { color: var(--accent); }
+  :where(.section--intro) { padding-top: clamp(50px,7vw,90px); }
+  :where(.band-down) { background: linear-gradient(180deg, var(--bg-2), var(--surface)); border-block: 1px solid var(--line-soft); }
+  :where(.band-up) { background: linear-gradient(180deg, var(--surface), var(--bg-2)); border-block: 1px solid var(--line-soft); }
+  :where(.beyond-title) { font-family: var(--display); font-weight: 600; font-size: clamp(30px,4.4vw,56px); line-height: 1.02; letter-spacing: -0.03em; margin: 22px 0 18px; }
+  :where(.beyond-sub) { color: var(--text-dim); max-width: 46ch; text-wrap: pretty; }
+  :where(.eyebrow--cta) { margin-bottom: 24px; }
+} /* fim @layer overrides (ex-inline) */

@@ -248,8 +248,8 @@
         <div class="ct">
           <b data-i18n="chart.title">Throughput do pipeline</b>
           <span class="legend">
-            <span><i style="background:#2f6bff"></i><span data-i18n="chart.s1">Ingestão</span></span>
-            <span><i style="background:#07b39b"></i><span data-i18n="chart.s2">Modelado</span></span>
+            <span><i class="legend-s1"></i><span data-i18n="chart.s1">Ingestão</span></span>
+            <span><i class="legend-s2"></i><span data-i18n="chart.s2">Modelado</span></span>
           </span>
         </div>
         <div class="chart-wrap"><canvas id="lineChart"></canvas></div>
@@ -261,12 +261,12 @@
           <div class="bar-row"><span>SQL</span><div class="bar-track"><div class="bar-fill" data-w="86"></div></div><span>86</span></div>
           <div class="bar-row"><span>CRM</span><div class="bar-track"><div class="bar-fill" data-w="64"></div></div><span>64</span></div>
           <div class="bar-row"><span>API</span><div class="bar-track"><div class="bar-fill" data-w="47"></div></div><span>47</span></div>
-          <div class="bar-row" style="margin-bottom:0"><span>CSV</span><div class="bar-track"><div class="bar-fill" data-w="33"></div></div><span>33</span></div>
+          <div class="bar-row bar-row--last"><span>CSV</span><div class="bar-track"><div class="bar-fill" data-w="33"></div></div><span>33</span></div>
         </div>
         <div class="gauge-card">
           <div class="bt" data-i18n="gauge.title">Saúde dos dados</div>
           <div class="gwrap">
-            <canvas id="gauge" style="width:100%;height:96px"></canvas>
+            <canvas id="gauge" class="gauge-canvas"></canvas>
             <div class="gval"><b><span id="gaugeVal">0</span>%</b><small data-i18n="gauge.sub">qualidade</small></div>
           </div>
         </div>
@@ -508,8 +508,8 @@
   <div class="wrap">
     <div class="approach-aside reveal">
       <span class="eyebrow" data-i18n="appr.eyebrow">Nosso ponto de partida</span>
-      <h2 style="font-family:var(--display);font-weight:600;font-size:clamp(30px,4vw,52px);line-height:1.04;letter-spacing:-0.03em;margin:22px 0 18px;" data-i18n="appr.title">Encontramos o próximo passo certo antes de construir.</h2>
-      <p style="color:var(--text-dim);max-width:42ch;text-wrap:pretty;" data-i18n="appr.sub">Seu negócio não precisa de mais um dashboard genérico. Precisa de clareza sobre quais decisões, dados, pessoas e sistemas devem mudar primeiro.</p>
+      <h2 class="approach-title" data-i18n="appr.title">Encontramos o próximo passo certo antes de construir.</h2>
+      <p class="approach-sub" data-i18n="appr.sub">Seu negócio não precisa de mais um dashboard genérico. Precisa de clareza sobre quais decisões, dados, pessoas e sistemas devem mudar primeiro.</p>
     </div>
 
     <div class="steps">
@@ -598,12 +598,12 @@
       </div>
       <div class="bignum">
         <div class="nb from">
-          <div class="v">6<span style="font-size:0.5em">h</span></div>
+          <div class="v">6<span class="unit-sm">h</span></div>
           <div class="l" data-i18n="imp.before">Antes · manual</div>
         </div>
         <div class="arw"><svg viewBox="0 0 48 24" fill="none"><path d="M2 12h40M32 4l10 8-10 8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="nb to">
-          <div class="v">5<span style="font-size:0.5em">min</span></div>
+          <div class="v">5<span class="unit-sm">min</span></div>
           <div class="l" data-i18n="imp.after">Depois · automatizado</div>
         </div>
       </div>
@@ -881,7 +881,7 @@
 <section class="section team" id="team" data-screen-label="Team">
   <div class="wrap">
     <div class="team-top">
-      <div class="section-head reveal" style="margin-bottom:0;">
+      <div class="section-head section-head--flush reveal">
         <span class="eyebrow" data-i18n="team.eyebrow">As pessoas por trás</span>
         <h2 data-i18n="team.title">As pessoas por trás. Cada disciplina que você precisa.</h2>
         <p data-i18n="team.sub">Toda disciplina necessária para ir do dado bruto à decisão, sob o mesmo teto e responsável de ponta a ponta.</p>
@@ -951,8 +951,8 @@
 <!-- ============================ FAQ ============================ -->
 <section class="section faq" id="faq" data-screen-label="FAQ">
   <div class="wrap">
-    <div class="section-head reveal" style="margin-inline:auto;text-align:center;">
-      <span class="eyebrow" style="justify-content:center;" data-i18n="faq.eyebrow">Perguntas frequentes</span>
+    <div class="section-head section-head--center reveal">
+      <span class="eyebrow eyebrow--center" data-i18n="faq.eyebrow">Perguntas frequentes</span>
       <h2 data-i18n="faq.title">As perguntas que os times fazem antes de fechar.</h2>
     </div>
 
@@ -1003,8 +1003,8 @@
   <div class="wrap about-grid">
     <div class="reveal">
       <span class="eyebrow" data-i18n="about.eyebrow">Sobre a Norva</span>
-      <p class="about-statement" style="margin-top:24px;" data-i18n="about.statement">Transformamos dado bruto na direção que o seu negócio segue.</p>
-      <p style="color:var(--text-dim);margin-top:26px;max-width:50ch;text-wrap:pretty;" data-i18n="about.p">Norva nasce de norte e valor — a jornada do dado bruto até a decisão certa. Não apenas processamos dados; orientamos organizações. Parte do <strong>Kystone Group</strong>, somos um time pequeno de engenheiros, cientistas de dados e designers que se importa tanto com a cultura quanto com o código.</p>
+      <p class="about-statement about-statement--spaced" data-i18n="about.statement">Transformamos dado bruto na direção que o seu negócio segue.</p>
+      <p class="about-copy" data-i18n="about.p">Norva nasce de norte e valor — a jornada do dado bruto até a decisão certa. Não apenas processamos dados; orientamos organizações. Parte do <strong>Kystone Group</strong>, somos um time pequeno de engenheiros, cientistas de dados e designers que se importa tanto com a cultura quanto com o código.</p>
     </div>
     <div class="about-stats reveal" data-delay="2">
       <div class="cell"><div class="num"><span class="gradient-text">E2E</span></div><div class="lbl" data-i18n="about.n1">do dado bruto à decisão</div></div>
@@ -1022,7 +1022,7 @@
     <div class="contact-inner">
       <div class="reveal">
         <span class="eyebrow" data-i18n="contact.eyebrow">Comece com clareza</span>
-        <h2 style="margin-top:22px;" data-i18n="contact.title">Qual decisão está travando o seu negócio?</h2>
+        <h2 class="contact-title" data-i18n="contact.title">Qual decisão está travando o seu negócio?</h2>
         <p class="lead" data-i18n="contact.lead">Conte onde a operação está travada. Voltamos com a próxima pergunta que vale responder — e um caminho claro para avançar.</p>
         <div class="contact-meta">
           <a href="mailto:hello@norva.cloud"><span data-i18n="contact.email">Escreva para</span> hello@norva.cloud</a>
@@ -1067,12 +1067,12 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer-top">
-      <div style="max-width:300px;">
-        <a class="brand" href="#top" style="margin-bottom:18px;">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="#top">
           <img class="mark brand-mark" src="assets/blue-norva-logo.png" alt="" aria-hidden="true" />
           <span class="wordmark norva">nor<span>va</span></span>
         </a>
-        <p style="color:var(--text-dim);font-size:14px;margin-top:8px;" data-i18n="footer.tagline">Inteligência que orienta. Dados que entregam.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Inteligência que orienta. Dados que entregam.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
