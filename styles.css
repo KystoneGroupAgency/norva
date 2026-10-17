@@ -886,9 +886,9 @@ body::after {
 /* ============================================================
    Ex-estilos inline (index.html e portal.html)
    Camada "overrides": vence "base" como o atributo style vencia, e
-   continua perdendo para !important, como antes. :where() zera a
+   continua perdendo para declarações important, como antes. :where() zera a
    especificidade para que overrides vindos dos outros arquivos
-   (ex-!important) continuem vencendo estes valores, como antes.
+   (ex-important) continuem vencendo estes valores, como antes.
    Valores copiados literalmente do atributo style.
    ============================================================ */
 @layer overrides {
