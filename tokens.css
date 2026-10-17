@@ -1,0 +1,62 @@
+/* ============================================================
+   NORVA — tokens de design (único :root)
+   Reúne as variáveis que estavam em styles.css e exhibition.css.
+   Fase 1 do ROADMAP-REDESIGN.md: valores mantidos exatamente como
+   eram aplicados (os de exhibition.css venciam), sem mudança visual.
+   ============================================================ */
+
+:root {
+  /* base */
+  --bg: #f6f7fb;
+  --bg-2: #eef1f7;
+  --surface: #ffffff;
+  --surface-2: #f3f6fc;
+  --surface-3: #e8edf6;
+
+  /* hairlines */
+  --line: rgba(18, 28, 54, 0.10);
+  --line-soft: rgba(18, 28, 54, 0.06);
+  --line-strong: rgba(18, 28, 54, 0.17);
+
+  /* ink */
+  --text: #0e1422;
+  --text-dim: #4d5772;
+  --text-mute: #8b93a8;
+
+  /* accents */
+  --accent: #2f6bff;
+  --accent-bright: #1f5cf5;
+  --accent-2: #07b39b;
+  --accent-3: #7c5cff;
+
+  --glow: rgba(47, 107, 255, 0.28);
+  --glow-2: rgba(7, 179, 155, 0.22);
+
+  --shadow: 0 30px 80px -36px rgba(30, 50, 110, 0.30);
+  --shadow-sm: 0 16px 40px -24px rgba(30, 50, 110, 0.26);
+
+  --grad: linear-gradient(105deg, var(--accent) 0%, var(--accent-2) 100%);
+
+  /* type */
+  --display: "Space Grotesk", sans-serif;
+  --body: "Manrope", sans-serif;
+  --mono: "Space Mono", "SFMono-Regular", monospace;
+
+  --maxw: 1320px;
+  --gutter: clamp(24px, 4vw, 64px); /* valor vencedor (era o de exhibition.css) */
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* paleta "exhibition" (vinha de exhibition.css) */
+  --ex-bg: #f1f3ef;
+  --ex-ink: #151b17;
+  --ex-blue: #2f6bff;
+  --ex-line: rgba(21, 27, 23, 0.2);
+  --ex-faint: rgba(21, 27, 23, 0.58);
+}
+
+/* respiro lateral no mobile (antes repetido em mobile.css e exhibition.css;
+   o de exhibition.css era o aplicado) */
+@media (max-width: 720px) {
+  :root { --gutter: clamp(18px, 5vw, 28px); }
+}

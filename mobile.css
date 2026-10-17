@@ -30,8 +30,6 @@ body.menu-lock { overflow: hidden; }
    ============================================================ */
 @media (max-width: 720px) {
 
-  :root { --gutter: clamp(16px, 5vw, 26px); }
-
   /* keep anchored sections clear of the fixed nav */
   html { scroll-padding-top: 78px; }
 

@@ -4,15 +4,6 @@
  * Loaded last so the existing content, translations and interactions remain intact.
  */
 
-:root {
-  --ex-bg: #f1f3ef;
-  --ex-ink: #151b17;
-  --ex-blue: #2f6bff;
-  --ex-line: rgba(21, 27, 23, 0.2);
-  --ex-faint: rgba(21, 27, 23, 0.58);
-  --gutter: clamp(24px, 4vw, 64px);
-}
-
 html { background: var(--ex-bg); }
 body {
   background: var(--ex-bg);
@@ -757,7 +748,6 @@ body {
 }
 
 @media (max-width: 720px) {
-  :root { --gutter: clamp(18px, 5vw, 28px); }
   .nav { min-height: 70px; padding-block: 14px; }
   .hero { min-height: 820px; padding-top: 70px; }
   .hero .wrap { min-height: 750px; }

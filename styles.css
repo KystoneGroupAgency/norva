@@ -3,49 +3,6 @@
    Light · airy · electric blue + teal data accent
    ============================================================ */
 
-:root {
-  /* base */
-  --bg: #f6f7fb;
-  --bg-2: #eef1f7;
-  --surface: #ffffff;
-  --surface-2: #f3f6fc;
-  --surface-3: #e8edf6;
-
-  /* hairlines */
-  --line: rgba(18, 28, 54, 0.10);
-  --line-soft: rgba(18, 28, 54, 0.06);
-  --line-strong: rgba(18, 28, 54, 0.17);
-
-  /* ink */
-  --text: #0e1422;
-  --text-dim: #4d5772;
-  --text-mute: #8b93a8;
-
-  /* accents */
-  --accent: #2f6bff;
-  --accent-bright: #1f5cf5;
-  --accent-2: #07b39b;
-  --accent-3: #7c5cff;
-
-  --glow: rgba(47, 107, 255, 0.28);
-  --glow-2: rgba(7, 179, 155, 0.22);
-
-  --shadow: 0 30px 80px -36px rgba(30, 50, 110, 0.30);
-  --shadow-sm: 0 16px 40px -24px rgba(30, 50, 110, 0.26);
-
-  --grad: linear-gradient(105deg, var(--accent) 0%, var(--accent-2) 100%);
-
-  /* type */
-  --display: "Space Grotesk", sans-serif;
-  --body: "Manrope", sans-serif;
-  --mono: "Space Mono", "SFMono-Regular", monospace;
-
-  --maxw: 1320px;
-  --gutter: clamp(20px, 5vw, 68px);
-
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
