@@ -1,2 +1,6 @@
 # Ferramentas de desenvolvimento (rede de segurança do redesign): não são publicadas.
 tools/
+.taste-skill/
+.agents/
+skills-lock.json
+ROADMAP-REDESIGN.md
