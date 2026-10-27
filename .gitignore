@@ -1,3 +1,4 @@
 dist/
 tools/out/
 __pycache__/
+.taste-skill/

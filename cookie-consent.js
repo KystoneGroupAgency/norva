@@ -23,7 +23,7 @@
         NorvaConsent.reset()           -> clears the stored choice
 
    Language follows the site toggle: the banner watches <html lang>,
-   which app.js / portal-page.js set when PT/EN is chosen.
+   which site.js sets when PT/EN is chosen.
    ============================================================ */
 (function () {
   "use strict";
@@ -134,7 +134,6 @@
     banner.innerHTML =
       '<div class="ncc-inner">' +
         '<div class="ncc-copy">' +
-          '<p class="ncc-eyebrow"><span class="ncc-dot" aria-hidden="true"></span>LGPD</p>' +
           '<h2 class="ncc-title" id="ncc-title">' + TEXT.pt.title + '</h2>' +
           '<p class="ncc-body" id="ncc-body">' + TEXT.pt.body + '</p>' +
         '</div>' +

@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/portal.html", "destination": "/#como-funciona", "permanent": true },
+    { "source": "/portal", "destination": "/#como-funciona", "permanent": true }
+  ]
+}
